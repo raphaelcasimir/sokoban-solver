@@ -40,7 +40,7 @@ bool Maze::_isCompleted() const
 {
     for (unsigned int i=0; i<this->m_pos_boxes.size(); ++i)
     {
-        if (!this->isSquareBoxPlaced(this->m_pos_boxes[i]))
+        if (!this->isSquareBoxPlaced(this->m_pos_goals[i]))
             return false;
     }
     return true;
@@ -123,11 +123,13 @@ bool Maze::_load(const std::string& path)
 
                     // Add this value in the field
                     this->m_field.push_back(s);
+                    this->m_field2.push_back(s);
                 }
                 else
                 {
                     // Here - Out of bound
                     this->m_field.push_back(SPRITE_GROUND);
+                    this->m_field2.push_back(SPRITE_GROUND);
                 }
             }
         }
@@ -149,13 +151,18 @@ bool Maze::_load(const std::string& path)
     return false;
 }
 
-bool Maze::bruteForce(Maze& m)
-{
 
+void Maze::resetNiveau(Maze& m)
+{
+    for(unsigned int i=0; i<m.m_field.size(); i++)
+        m.m_field[i]=m.m_field2[i];
+}
+
+bool Maze::mouvementBF(Maze& m)
+{
     bool win=false;
 
-
-        for (int compteur=0; compteur<4; compteur++)
+    for (int compteur=0; compteur<1; compteur++)
         {
             if (compteur==0)
                 win = m.updatePlayer(TOP);
@@ -165,7 +172,23 @@ bool Maze::bruteForce(Maze& m)
                 win = m.updatePlayer(RIGHT);
             if (compteur==3)
                 win = m.updatePlayer(LEFT);
+
+            if (win==true)
+                return win;
+            if (win==false)
+            {
+                m.resetNiveau(m);
+            }
         }
+
+    return win;
+}
+
+bool Maze::bruteForce(Maze& m)
+{
+    bool win=false;
+
+    win = mouvementBF(m);
 
     return win;
 }

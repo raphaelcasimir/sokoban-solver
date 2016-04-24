@@ -34,6 +34,7 @@ class Maze
         std::string m_level_path;
 
         std::vector<unsigned char> m_field; // field
+        std::vector<unsigned char> m_field2; // field pour la réinitialisatin du niveau
         std::vector<unsigned short> m_pos_boxes; // box positions
         std::vector<unsigned short> m_pos_goals; // goal positions
 
@@ -51,6 +52,8 @@ class Maze
         bool updatePlayer(char dir);
         void draw(const Graphic& g) const;
         bool bruteForce(Maze& m);
+        bool mouvementBF(Maze& m);
+        void resetNiveau(Maze& m);
 
         // Specific getters for field
         bool isSquareWalkable(unsigned short pos) const;
