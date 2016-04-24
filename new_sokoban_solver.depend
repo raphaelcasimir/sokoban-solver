@@ -1804,3 +1804,36 @@
 	<fstream>
 	<iomanip>
 
+1461418312 source:c:\users\alexandre\documents\sokoban git\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1461447360 c:\users\alexandre\documents\sokoban git\maze.h
+	<vector>
+	<string>
+
+1461258691 c:\users\alexandre\documents\sokoban git\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1452771232 c:\users\alexandre\documents\sokoban git\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\sokoban git\utils\coord.h
+
+1452771232 source:c:\users\alexandre\documents\sokoban git\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\sokoban git\utils\coord.cpp
+	"coord.h"
+
+1461495541 source:c:\users\alexandre\documents\sokoban git\graphic.cpp
+	"graphic.h"
+

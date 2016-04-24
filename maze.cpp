@@ -179,6 +179,7 @@ bool Maze::mouvementBF(Maze& m)
             {
                 m.resetNiveau(m);
             }
+            //win = mouvementBF(m);
         }
 
     return win;
