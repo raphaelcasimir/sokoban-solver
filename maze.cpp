@@ -187,7 +187,7 @@ bool Maze::mouvementBF(Maze& m)
 bool Maze::bruteForce(Maze& m)
 {
     bool win=false;
-
+    while (_isCompleted()==false)
     win = mouvementBF(m);
 
     return win;
