@@ -117,19 +117,20 @@ bool Maze::_load(const std::string& path)
                     if (s == SPRITE_MARIO)
                     {
                         this->m_pos_player = pos;
+                        this->m_pos_playerReset = pos;
                         //LDebug << "\tAdding player pos (" << pos << ")";
                         s = SPRITE_GROUND;
                     }
 
                     // Add this value in the field
                     this->m_field.push_back(s);
-                    this->m_field2.push_back(s);
+                    this->m_fieldReset.push_back(s);
                 }
                 else
                 {
                     // Here - Out of bound
                     this->m_field.push_back(SPRITE_GROUND);
-                    this->m_field2.push_back(SPRITE_GROUND);
+                    this->m_fieldReset.push_back(SPRITE_GROUND);
                 }
             }
         }
@@ -154,43 +155,107 @@ bool Maze::_load(const std::string& path)
 
 void Maze::resetNiveau(Maze& m)
 {
-    for(unsigned int i=0; i<m.m_field.size(); i++)
-        m.m_field[i]=m.m_field2[i];
+    for(unsigned int i=0; i<m_field.size(); i++)
+        m_field[i]=m_fieldReset[i];
+
+    m_pos_player=m_pos_playerReset;
 }
 
-bool Maze::mouvementBF(Maze& m)
+int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
 {
     bool win=false;
 
-    for (int compteur=0; compteur<1; compteur++)
+    for (int i=0; i<4; i++)
         {
-            if (compteur==0)
-                win = m.updatePlayer(TOP);
-            if (compteur==1)
-                win = m.updatePlayer(BOTTOM);
-            if (compteur==2)
-                win = m.updatePlayer(RIGHT);
-            if (compteur==3)
-                win = m.updatePlayer(LEFT);
+            if (i==0)
+            {
+                win = updatePlayer(TOP);
+                std::cout<<"^ = "<<i<<std::endl;
+                g.clear();
+                m.draw(g);
+                g.display(Coord::m_nb_col);
+                rest(1000);
+                if (compteur>=1)
+                {
+                    compteur--;
+                    compteur=mouvementBF(m,compteur, g);
+                }
+            }
 
-            if (win==true)
-                return win;
-            if (win==false)
+            if (i==1)
+            {
+                win = updatePlayer(BOTTOM);
+                std::cout<<"B = "<<i<<std::endl;
+                g.clear();
+                m.draw(g);
+                g.display(Coord::m_nb_col);
+                rest(1000);
+                if (compteur>=1)
+                {
+                    compteur--;
+                    compteur=mouvementBF(m,compteur, g);
+                }
+            }
+
+            if (i==2)
+            {
+                win = updatePlayer(RIGHT);
+                std::cout<<"> = "<<i<<std::endl;
+                g.clear();
+                m.draw(g);
+                g.display(Coord::m_nb_col);
+                rest(1000);
+                if (compteur>=1)
+                {
+                    compteur--;
+                    compteur=mouvementBF(m,compteur, g);
+                }
+            }
+
+            if (i==3)
+            {
+                win = updatePlayer(LEFT);
+                std::cout<<"< = "<<i<<std::endl;
+                g.clear();
+                m.draw(g);
+                g.display(Coord::m_nb_col);
+                rest(1000);
+                if (compteur>=1)
+                {
+                    compteur--;
+                    compteur=mouvementBF(m,compteur, g);
+                }
+            }
+
+            if (win==false&&compteur==0)
             {
                 m.resetNiveau(m);
+                g.clear();
+                m.draw(g);
+                g.display(Coord::m_nb_col);
+                rest(1000);
             }
-        }
 
-    return win;
+            if (win==true)
+                return -1;
+
+        }
+        compteur++;
+
+    return compteur;
 }
 
-bool Maze::bruteForce(Maze& m)
+bool Maze::bruteForce(Maze& m, Graphic& g)
 {
-    bool win=false;
-    while (_isCompleted()==false)
-    win = mouvementBF(m);
+    int compteur=0;
 
-    return win;
+    while (compteur!=-1)
+    {
+        std::cout<<"cpt = "<<compteur<<std::endl;
+        compteur = mouvementBF(m, compteur, g);
+    }
+
+    return true;
 }
 
 

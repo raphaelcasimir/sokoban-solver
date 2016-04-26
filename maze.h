@@ -30,11 +30,12 @@ class Maze
     private:
         unsigned char m_lig, m_col;
         unsigned short m_pos_player;
+        unsigned short m_pos_playerReset; // pour la réinisialisation
         char m_dir_player;
         std::string m_level_path;
 
         std::vector<unsigned char> m_field; // field
-        std::vector<unsigned char> m_field2; // field pour la réinitialisatin du niveau
+        std::vector<unsigned char> m_fieldReset; // field pour la réinitialisatin du niveau
         std::vector<unsigned short> m_pos_boxes; // box positions
         std::vector<unsigned short> m_pos_goals; // goal positions
 
@@ -51,8 +52,8 @@ class Maze
         bool init();
         bool updatePlayer(char dir);
         void draw(const Graphic& g) const;
-        bool bruteForce(Maze& m);
-        bool mouvementBF(Maze& m);
+        bool bruteForce(Maze& m, Graphic& g);
+        int mouvementBF(Maze& m, int compteur, Graphic& g);
         void resetNiveau(Maze& m);
 
         // Specific getters for field

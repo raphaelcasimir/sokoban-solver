@@ -50,11 +50,12 @@ int main()
                         win = m.updatePlayer(LEFT);
                         break;
                     case KEY_F:
-                        win = m.bruteForce(m);
+                        win = m.bruteForce(m, g);
                         break;
                 }
 
-                if (win) std::cout << "Win ! " << std::endl;
+                if (win)
+                    std::cout << "Win ! " << std::endl;
             }
 
             // Display on screen
