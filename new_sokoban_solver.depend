@@ -1804,3 +1804,38 @@
 	<fstream>
 	<iomanip>
 
+1461521873 source:d:\owncloud\documents\projets ece\sokoban-solver\graphic.cpp
+	"graphic.h"
+
+1461521873 d:\owncloud\documents\projets ece\sokoban-solver\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1461521873 source:d:\owncloud\documents\projets ece\sokoban-solver\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1461521873 d:\owncloud\documents\projets ece\sokoban-solver\utils\console.h
+	<iostream>
+
+1461521873 source:d:\owncloud\documents\projets ece\sokoban-solver\utils\coord.cpp
+	"coord.h"
+
+1461521873 d:\owncloud\documents\projets ece\sokoban-solver\utils\coord.h
+
+1461686136 source:d:\owncloud\documents\projets ece\sokoban-solver\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462063490 d:\owncloud\documents\projets ece\sokoban-solver\maze.h
+	<vector>
+	<map>
+	<queue>
+	<string>
+

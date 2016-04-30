@@ -458,3 +458,38 @@ std::ostream& operator << (std::ostream& O, const Maze& m)
 
     return O;
 }
+
+bool Maze::solveBFS(Maze& m, Graphic& g) {
+    Maze mc = m;
+
+}
+
+// BFS of Mario
+std::map <int, char>& bfsMario (Maze& mc) {
+    std::map <int, char> flammenWerferMap; // Check table (tableau de marquage)
+    std::queue <int> q;
+    unsigned short posTemp = 42;
+    unsigned short posTest = 42;
+    std::vector <unsigned short>  vXplore = {1,-1, mc.getCol(),-mc.getCol()}; // Storing the position modifiers to use a "for"
+
+    flammenWerferMap [mc.getPosPlayer()] = 'x';
+    q.push(posTemp);
+
+
+    while(!q.empty()) {
+        posTemp = q.front();
+        q.pop();
+
+        // Setting the position to explore
+        for (std::vector<unsigned short>::iterator it = vXplore.begin(); it != vXplore.end(); ++it) {
+            // Testing this position
+            posTest = *it;
+            if ( mc.isSquareWalkable(posTest) ) {
+                if (!flammenWerferMap[posTest]) {
+                    flammenWerferMap[posTest] = 'x';
+                    q.push(posTest);
+                }
+            }
+        }
+    }
+}
