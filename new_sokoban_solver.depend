@@ -1833,13 +1833,14 @@
 	"utils/coord.h"
 	<iostream>
 
-1462064605 d:\owncloud\documents\projets ece\sokoban-solver\maze.h
+1462112082 d:\owncloud\documents\projets ece\sokoban-solver\maze.h
 	<vector>
 	<map>
 	<queue>
+	<stack>
 	<string>
 
-1462101139 source:d:\owncloud\documents\projets ece\sokoban-solver\maze.cpp
+1462102592 source:d:\owncloud\documents\projets ece\sokoban-solver\maze.cpp
 	"maze.h"
 	"graphic.h"
 	"utils/console.h"

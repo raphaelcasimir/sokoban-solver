@@ -12,6 +12,7 @@ Please do not remove this header, if you use this file !
 #include <vector>
 #include <map>
 #include <queue>
+#include <stack>
 #include <string>
 
 // Max size for the field
@@ -70,6 +71,7 @@ class Maze
         bool isSquareGoal(unsigned short pos) const;
         bool isSquareWall(unsigned short pos) const;
         bool isSquareBoxPlaced(unsigned short pos) const;
+        std::vector <unsigned short> getKey() const;
 
         // Other getters
         const std::string& getLevelPath() const;
@@ -98,8 +100,17 @@ inline const std::vector<unsigned char>& Maze::getField() const { return this->m
 
 inline unsigned int Maze::getSize() const { return this->m_field.size(); }
 inline unsigned char Maze::getCol() const { return this->m_col;} // Added useful getter
-inline std::vector<unsigned short> Maze::getPosBoxes() const { return m_pos_boxes; }
+inline std::vector <unsigned short> Maze::getPosBoxes() const { return m_pos_boxes; }
 inline unsigned short Maze::getPosPlayer() const { return m_pos_player;}
+
+// Makes the map key that characterizes the state of the field, inlined since it's very short
+inline std::vector <unsigned short> Maze::getKey()const {
+    std::vector <unsigned short> key;
+    key.reserve(sizeof(unsigned short) + this->getPosBoxes().size());
+    key.push_back(this->getPosPlayer());
+    key.insert(key.end(),this->getPosBoxes().begin(),this->getPosBoxes().end());
+    return key;
+}
 
 inline void Maze::setSquare(unsigned short pos, unsigned char s)
 {

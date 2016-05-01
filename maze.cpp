@@ -467,7 +467,7 @@ bool Maze::solveBFS(Maze& m, Graphic& g) {
 // BFS of Mario
 std::map <int, char>& bfsMario (Maze& mc) {
     std::map <int, char> flammenWerferMap; // Check table (tableau de marquage)
-    std::queue <int> q;
+    std::queue <short int> q;
     unsigned short posTemp = 42;
     unsigned short posTest = 42;
     std::vector <unsigned short>  vXplore = {1,-1, mc.getCol(),-mc.getCol()}; // Storing the position modifiers to use a "for"
@@ -492,4 +492,42 @@ std::map <int, char>& bfsMario (Maze& mc) {
             }
         }
     }
+    return flammenWerferMap;
+}
+
+bool solveBFS(Maze& m, Graphic& g) {
+    std::map <std::vector<short int>, char> badassMap; // Big map that stores the field states. Keys are position of Mario and the boxes
+    std::vector <std::queue <short int>> qBox; // Queues for the boxes' BFS
+    std::stack <short int> marioPos; // Storing Mario's positions to be able to reconstitute the path to victory
+
+    // Where to put the positions to test (temporary variables)
+    unsigned short nextMarioPos = 42;
+    unsigned short nextBoxPos = 42;
+
+    std::vector <unsigned short>  vXplore = {1,-1, m.getCol(),-m.getCol()}; // Storing the position modifiers to use a "for" again
+
+    while (!m._isCompleted()) {
+    badassMap [m.getKey()] = 'x';
+    q.push(posTemp);
+
+
+    while(!q.empty()) {
+        posTemp = q.front();
+        q.pop();
+
+        // Setting the position to explore
+        for (std::vector<unsigned short>::iterator it = vXplore.begin(); it != vXplore.end(); ++it) {
+            // Testing this position
+            posTest = *it;
+            if ( mc.isSquareWalkable(posTest) ) {
+                if (!flammenWerferMap.count(posTest)) {
+                    flammenWerferMap[posTest] = 'x';
+                    q.push(posTest);
+                }
+            }
+        }
+    }
+    }
+
+    return 1;
 }
