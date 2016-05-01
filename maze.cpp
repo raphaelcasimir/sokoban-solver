@@ -538,6 +538,51 @@ bool Maze::solveBFS(Maze m, Graphic& g) {
                 }
             }
         }
+
+        nextMarioPos = posTemp - m.getCol();
+        if(m.bfsMario(m).count(nextMarioPos)) {
+            if( m._canPushBox(posTemp,BOTTOM,nextBoxPos) ) { // TOP
+                if(!badassMap[m.getKey()]) { // Does the state exist ?
+                    //qBox[i].push(nextBoxPos); // Add to the corresponding queue
+                    m.setSquare(m.getPosPlayer(),0);
+                    m.setPlayerPos(posTemp);
+                    m.setSquare(m.getPosPlayer(),5);
+                    m.setSquare(nextBoxPos, 2);
+
+                    badassMap[m.getKey()]= 'x';
+                }
+            }
+        }
+
+        nextMarioPos = posTemp + 1;
+        if(m.bfsMario(m).count(nextMarioPos)) {
+            if( m._canPushBox(posTemp,LEFT,nextBoxPos) ) { // TOP
+                if(!badassMap[m.getKey()]) { // Does the state exist ?
+                    //qBox[i].push(nextBoxPos); // Add to the corresponding queue
+                    m.setSquare(m.getPosPlayer(),0);
+                    m.setPlayerPos(posTemp);
+                    m.setSquare(m.getPosPlayer(),5);
+                    m.setSquare(nextBoxPos, 2);
+
+                    badassMap[m.getKey()]= 'x';
+                }
+            }
+        }
+
+        nextMarioPos = posTemp -1;
+        if(m.bfsMario(m).count(nextMarioPos)) {
+            if( m._canPushBox(posTemp,RIGHT,nextBoxPos) ) { // TOP
+                if(!badassMap[m.getKey()]) { // Does the state exist ?
+                    //qBox[i].push(nextBoxPos); // Add to the corresponding queue
+                    m.setSquare(m.getPosPlayer(),0);
+                    m.setPlayerPos(posTemp);
+                    m.setSquare(m.getPosPlayer(),5);
+                    m.setSquare(nextBoxPos, 2);
+
+                    badassMap[m.getKey()]= 'x';
+                }
+            }
+        }
     }
     }
     std::cout<<std::endl<<"Maze completed successfully"<<std::endl;
