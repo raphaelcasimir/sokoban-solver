@@ -10,8 +10,6 @@ Please do not remove this header, if you use this file !
 #define MAZE_H_INCLUDED
 
 #include <vector>
-#include <map>
-#include <queue>
 #include <string>
 
 // Max size for the field
@@ -54,14 +52,10 @@ class Maze
         bool init();
         bool updatePlayer(char dir);
         void draw(const Graphic& g) const;
-        void resetNiveau(Maze& m);
-
-        // Specific solver functions
-        bool solveBFS(Maze& m, Graphic& g);
         bool bruteForce(Maze& m, Graphic& g);
-        std::map <int, char> bfsMario (Maze& mc);
         int mouvementBF(Maze& m, int compteur, Graphic& g);
-
+        void resetNiveau(Maze& m);
+        void detectDeadlocks();
 
         // Specific getters for field
         bool isSquareWalkable(unsigned short pos) const;
@@ -70,12 +64,12 @@ class Maze
         bool isSquareGoal(unsigned short pos) const;
         bool isSquareWall(unsigned short pos) const;
         bool isSquareBoxPlaced(unsigned short pos) const;
+        bool isSquareDeadSquare(unsigned short pos) const;
 
         // Other getters
         const std::string& getLevelPath() const;
         unsigned short getPosPlayer() const;
         unsigned int getSize() const;
-        unsigned char getCol() const; // Useful
         void setSquare(unsigned short pos, unsigned char s);
         const std::vector<unsigned char>& getField() const;
         const std::vector<unsigned short>& getGoals() const;
@@ -97,7 +91,6 @@ inline const std::vector<unsigned short>& Maze::getGoals() const { return this->
 inline const std::vector<unsigned char>& Maze::getField() const { return this->m_field; }
 
 inline unsigned int Maze::getSize() const { return this->m_field.size(); }
-inline unsigned char Maze::getCol() const { return this->m_col;} // Added useful getter
 inline std::vector<unsigned short> Maze::getPosBoxes() const { return m_pos_boxes; }
 inline unsigned short Maze::getPosPlayer() const { return m_pos_player;}
 
@@ -139,4 +132,8 @@ inline bool Maze::isSquareBoxPlaced(unsigned short pos) const
     return (this->m_field[pos] == SPRITE_BOX_PLACED ? true : false);
 }
 
+inline bool Maze::isSquareDeadSquare(unsigned short pos) const
+{
+    return (this->m_field[pos] == SPRITE_DEADSQUARE ? true : false);
+}
 #endif // MAZE_H_INCLUDED
