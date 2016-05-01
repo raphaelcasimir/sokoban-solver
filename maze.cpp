@@ -156,26 +156,32 @@ bool Maze::_load(const std::string& path)
 }
 
 
-void Maze::resetNiveau(Maze& m)
+void Maze::resetNiveau(Maze& m)     // Fonction qui reset le niveau, ave cles coordonnées de base du niveau chargé
 {
     for(unsigned int i=0; i<m.m_field.size(); i++)
-        m.m_field[i]=m.m_fieldReset[i];
+        m.m_field[i]=m.m_fieldReset[i];             // Position de m_field copié dedans
 
-    m.m_pos_player=m.m_pos_playerReset;
+    m.m_pos_player=m.m_pos_playerReset;     // Position initiale deesd de player
+
+    for (unsigned int i=0; i<m.m_pos_playerBruteforceTab.size(); i++)
+        m.m_pos_playerBruteforceTab.pop_back();     // Vecteur de position de player qui reset
+
+    for (unsigned int j=0; j<m.m_fieldBruteforceTab.size(); j++)
+        m.m_fieldBruteforceTab.pop();       // Pile de position du niveau m_field
 }
 
 void Maze::setFieldBruteforce(Maze& m)
 {
     for(unsigned int i=0; i<m.m_field.size(); i++)
-        m.m_fieldBruteforce[i]=m.m_field[i];
+        m.m_fieldBruteforce[i]=m.m_field[i];            //Réinirital k ekl sation du field avec la position précédente, on reprend le niveau ua déplacment précedent
 
-    m.m_fieldBruteforceTab.push(m.m_fieldBruteforce);
-    m.m_pos_playerBruteforceTab.push_back(m.m_pos_player);
+    m.m_fieldBruteforceTab.push(m.m_fieldBruteforce);           // On rentre le veteur dans la pile
+    m.m_pos_playerBruteforceTab.push_back(m.m_pos_player);      // On rentre la position de player dans le vecteur
 }
 
 void Maze::retourArriere(Maze& m)
 {
-    std::vector<unsigned char> m_fieldTampon=m.m_fieldBruteforceTab.top();
+    std::vector<unsigned char> m_fieldTampon=m.m_fieldBruteforceTab.top();  // Vecteur tampon qui sert à reinisialiser  la position du niveau au mouvement précédent            ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb ekljhgbnnjhhghvncgfbvnb
 
     for(unsigned int i=0; i<m.m_field.size(); i++)
         m.m_field[i]=m_fieldTampon[i];
@@ -185,70 +191,73 @@ void Maze::retourArriere(Maze& m)
     m.m_fieldBruteforceTab.pop();
 }
 
-int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
+int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)    // Fonction qui donne le mouvement de player dans les 4 directions de base
 {
     bool win=false;
 
     for (int i=0; i<4; i++)
         {
-        m.setFieldBruteforce(m);
+        m.setFieldBruteforce(m);        // On enregistre la positio actuelle pour pouvoir revenir en arriere qi le niveau n'est pas termine
 
-            if (i==0)
+        if (g.keyGet(KEY_ESC))      // Si on appuye sur ESC on quitte le brute force
+            return -2;
+
+            if (i==0)           // On essaye les quatre direections une par une
             {
-                win = updatePlayer(TOP);
-                std::cout<<"^ = "<<i<<std::endl;
+                win = updatePlayer(TOP);            // Mouvement TOP
+                std::cout<<"^ = "<<i<<std::endl;                //Affichage dans la console puis sur allegro
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
                 rest(10);
                 if (win==true)
                     return -1;
-                if (compteur>0)
+                if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
                 }
             }
 
-            if (i==1)
+            if (i==1)           // On essaye les quatre direections une par une
             {
-                win = updatePlayer(BOTTOM);
-                std::cout<<"B = "<<i<<std::endl;
+                win = updatePlayer(BOTTOM);            // Mouvement BOTTOM
+                std::cout<<"B = "<<i<<std::endl;                //Affichage dans la console puis sur allegro
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
                 rest(10);
-                if (compteur>0)
+                if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
                 }
             }
 
-            if (i==2)
+            if (i==3)           // On essaye les quatre direections une par une
             {
-                win = updatePlayer(RIGHT);
-                std::cout<<"> = "<<i<<std::endl;
+                win = updatePlayer(RIGHT);                      // Mouvement RIGHT
+                std::cout<<"> = "<<i<<std::endl;                //Affichage dans la console puis sur allegro
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
                 rest(10);
-                if (compteur>0)
+                if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
                 }
             }
 
-            if (i==3)
+            if (i==2)           // On essaye les quatre direections une par une
             {
-                win = updatePlayer(LEFT);
-                std::cout<<"< = "<<i<<std::endl;
+                win = updatePlayer(LEFT);                           // Mouvement LEFT
+                std::cout<<"< = "<<i<<std::endl;                //Affichage dans la console puis sur allegro
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
                 rest(10);
-                if (compteur>0)
+                if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
@@ -262,7 +271,7 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
                 g.display(Coord::m_nb_col);
                 rest(10);
             }
-            if (win==false&&compteur==0)
+            if (win==false&&compteur==0)            // Si le niveau n'est pas terminé après le dernier déplacement on revient en arriere
             {
                 m.retourArriere(m);
                 g.clear();
@@ -271,7 +280,7 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
                 rest(10);
             }
 
-            if (_isCompleted())
+            if (_isCompleted())     // On verifie si le niveau est terminé
                 return -1;
 
         }
@@ -284,20 +293,25 @@ bool Maze::bruteForce(Maze& m, Graphic& g)
 {
     int compteur=0;
 
-    while (compteur!=-1)
+    while (compteur!=-1||compteur==-2)
     {
         std::cout<<"cpt = "<<compteur<<std::endl;
         compteur = mouvementBF(m, compteur, g);
     }
 
+    if (compteur==-1)
         return true;
+    if (compteur==-2)
+        return false;
+
+    return true;
 }
 
 
 
-bool Maze::updatePlayer(char dir)
+bool Maze::updatePlayer(char dir)               // Cette méthode sert à déplacer le joueur manuellement avec les flèches du clavier
 {
-    if (dir < 0 || dir > MAX_DIR)
+    if (dir < 0 || dir > MAX_DIR)               // On verifie que la direction est cohérente
     {
         std::cerr << "Maze::updatePlayer => Direction not correct... " << +dir << std::endl;
         return false;
@@ -309,30 +323,30 @@ bool Maze::updatePlayer(char dir)
     unsigned short pos=Coord::getDirPos(m_pos_player,dir);
     unsigned short newPosBox=Coord::getDirPos(pos,dir);
 
-    switch (dir)
+    switch (dir)            // Ici on fait un switch pour les 4 directions possibles
     {
     case TOP:
-        if (isSquareWalkable(pos))
+        if (isSquareWalkable(pos))              // On verifie que la prochaine case est vide
             m_pos_player=pos;
 
-        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
+        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))      // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))      // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))      // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
             }
-            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))        // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))     // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GROUND);
@@ -343,27 +357,27 @@ bool Maze::updatePlayer(char dir)
         break;
 
     case BOTTOM:
-        if (isSquareWalkable(pos))
+        if (isSquareWalkable(pos))          // On verifie que la prochaine case est vide
             m_pos_player=pos;
 
-        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
+        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))          // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))          // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))       // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
             }
-            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))            // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))         // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GROUND);
@@ -374,27 +388,27 @@ bool Maze::updatePlayer(char dir)
         break;
 
     case RIGHT:
-        if (isSquareWalkable(pos))
+        if (isSquareWalkable(pos))              // On verifie que la prochaine case est vide
             m_pos_player=pos;
 
-        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
+        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))          // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))          // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))       // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
             }
-            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))        // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))     // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GROUND);
@@ -405,27 +419,27 @@ bool Maze::updatePlayer(char dir)
         break;
 
     case LEFT:
-        if (isSquareWalkable(pos))
+        if (isSquareWalkable(pos))                  // On verifie que la prochaine case est vide
             m_pos_player=pos;
 
-        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
+        else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))          // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))          // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))       // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
             }
-            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))
+            if (isSquareGoal(newPosBox)&&isSquareBoxPlaced(pos))        // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GOAL);
             }
-            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGoal(newPosBox)&&(!isSquareBoxPlaced(pos)))         // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX_PLACED);
                 setSquare(pos,SPRITE_GROUND);

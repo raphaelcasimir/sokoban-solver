@@ -32,8 +32,8 @@ class Maze
         unsigned char m_lig, m_col;
         unsigned short m_pos_player;
         unsigned short m_pos_playerReset; // pour la réinisialisation
-        unsigned short m_pos_playerBruteforce;
-        std::vector <unsigned short> m_pos_playerBruteforceTab;
+        unsigned short m_pos_playerBruteforce;  // Copie de la position de player poour réinisaitilesre la position pour le brute force
+        std::vector <unsigned short> m_pos_playerBruteforceTab;     // Vecteur de position de player pour le brute force
         char m_dir_player;
         std::string m_level_path;
 
@@ -46,33 +46,33 @@ class Maze
 
         friend std::ostream& operator << (std::ostream& O, const Maze& n);
 
-        bool _isCompleted() const;
-        bool _canPushBox(unsigned short posBox, char dir, unsigned short& newPosBox) const;
-        bool _load(const std::string& path);
+        bool _isCompleted() const;      // Fonction booléenne ui verifie que le niveau est complété
+        bool _canPushBox(unsigned short posBox, char dir, unsigned short& newPosBox) const;     // Fonction qui verifie que la caisse est poussable
+        bool _load(const std::string& path);    // Fonction qui charge le niveau
 
     public:
         Maze(const std::string& path);
         ~Maze();
 
         bool init();
-        bool updatePlayer(char dir);
+        bool updatePlayer(char dir);            // Cette méthode sert à déplacer le joueur manuellement avec les flèches du clavier
         void draw(const Graphic& g) const;
-        bool bruteForce(Maze& m, Graphic& g);
+        bool bruteForce(Maze& m, Graphic& g);       // Fonction qui lance la méthode récursive du brute force
 
-        int  mouvementBF(Maze& m, int compteur, Graphic& g);
-        void resetNiveau(Maze& m);
-        void retourArriere(Maze& m);
-        void setFieldBruteforce(Maze& m);
-        void detectDeadlocks();
+        int  mouvementBF(Maze& m, int compteur, Graphic& g);    // Fonction rcrsive du brute force
+        void resetNiveau(Maze& m);      // Fonction pour reset le niveau si besoin
+        void retourArriere(Maze& m);        // Fonction qui revient en arriere pour le brute force
+        void setFieldBruteforce(Maze& m);       // Fonction pour sauvegarder les coordonnées de m_field
+        void detectDeadlocks(); //      Detecte les deadlocks
 
         // Specific getters for field
-        bool isSquareWalkable(unsigned short pos) const;
-        bool isSquareGround(unsigned short pos) const;
-        bool isSquareBox(unsigned short pos) const;
-        bool isSquareGoal(unsigned short pos) const;
-        bool isSquareWall(unsigned short pos) const;
-        bool isSquareBoxPlaced(unsigned short pos) const;
-        bool isSquareDeadSquare(unsigned short pos) const;
+        bool isSquareWalkable(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos, qu'il est posible de se déplacer dessus
+        bool isSquareGround(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est une ase de sol
+        bool isSquareBox(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos  est une caisse
+        bool isSquareGoal(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est une case but
+        bool isSquareWall(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est un mure
+        bool isSquareBoxPlaced(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est une caisse placée sur une case goal
+        bool isSquareDeadSquare(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est un deadlock
 
         // Other getters
         const std::string& getLevelPath() const;

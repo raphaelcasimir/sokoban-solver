@@ -3,17 +3,17 @@
 
 enum
 {
-    MIN_DIR = 0, TOP = 0, BOTTOM = 1, LEFT = 2, RIGHT = 3, NONE = -1, MAX_DIR = 4
+    MIN_DIR = 0, TOP = 0, BOTTOM = 1, LEFT = 2, RIGHT = 3, NONE = -1, MAX_DIR = 4       // En semble des directions poossible pour le player
 };
 
 struct Coord
 {
     static int m_nb_col;
 
-    inline static void coord2D(unsigned short pos, unsigned int& l, unsigned int& c);
-    inline static unsigned short coord1D(unsigned int l, unsigned int c);
+    inline static void coord2D(unsigned short pos, unsigned int& l, unsigned int& c);   // Fonction qui renvoie les coordonnées en 2 dimensions avec la ligne et la colonne
+    inline static unsigned short coord1D(unsigned int l, unsigned int c);       // Fnction qui renvoie les coordonnées en 1 dimension
 
-    inline static char getPosDir(int pos)
+    inline static char getPosDir(int pos)       // Fonction qui détermine la direction en fonction de laersfa position et du nb de colonne
     {
         char dir = NONE;
         if (pos == -1) dir = LEFT;
