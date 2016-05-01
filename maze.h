@@ -9,7 +9,6 @@ Please do not remove this header, if you use this file !
 #ifndef MAZE_H_INCLUDED
 #define MAZE_H_INCLUDED
 
-#include <vector>
 #include <map>
 #include <queue>
 #include <stack>
@@ -35,11 +34,15 @@ class Maze
         unsigned char m_lig, m_col;
         unsigned short m_pos_player;
         unsigned short m_pos_playerReset; // pour la réinisialisation
+        unsigned short m_pos_playerBruteforce;  // Copie de la position de player poour réinisaitilesre la position pour le brute force
+        std::vector <unsigned short> m_pos_playerBruteforceTab;     // Vecteur de position de player pour le brute force
         char m_dir_player;
         std::string m_level_path;
 
         std::vector<unsigned char> m_field; // field
         std::vector<unsigned char> m_fieldReset; // field pour la réinitialisatin du niveau
+        std::vector<unsigned char> m_fieldBruteforce;
+        std::stack<std::vector<unsigned char> > m_fieldBruteforceTab;
         std::vector<unsigned short> m_pos_boxes; // box positions
         std::vector<unsigned short> m_pos_goals; // goal positions
 
@@ -50,37 +53,43 @@ class Maze
     public:
         bool _canPushBox(unsigned short posBox, char dir, unsigned short& newPosBox) const;
         bool _isCompleted() const;
-
         Maze(const std::string& path);
         ~Maze();
 
 
         bool init();
+
         bool updatePlayer(char dir);
         void draw(const Graphic& g) const;
-        void resetNiveau(Maze& m);
 
         // Specific solver functions
         bool solveBFS(Maze m, Graphic& g);
-        bool bruteForce(Maze& m, Graphic& g);
-        std::map <int, char> bfsMario (Maze mc);
-        int mouvementBF(Maze& m, int compteur, Graphic& g);
+        bool bruteForce(Maze& m, Graphic& g); // Fonction qui lance la méthode récursive du brute force
 
+
+        int  mouvementBF(Maze& m, int compteur, Graphic& g);    // Fonction rcrsive du brute force
+        void resetNiveau(Maze& m);      // Fonction pour reset le niveau si besoin
+        void retourArriere(Maze& m);        // Fonction qui revient en arriere pour le brute force
+        void setFieldBruteforce(Maze& m);       // Fonction pour sauvegarder les coordonnées de m_field
+        void detectDeadlocks(); //      Detecte les deadlocks
+        std::map <int, char> bfsMario (Maze mc); // Effectue le BFS de Mario
 
         // Specific getters for field
-        bool isSquareWalkable(unsigned short pos) const;
-        bool isSquareGround(unsigned short pos) const;
-        bool isSquareBox(unsigned short pos) const;
-        bool isSquareGoal(unsigned short pos) const;
-        bool isSquareWall(unsigned short pos) const;
-        bool isSquareBoxPlaced(unsigned short pos) const;
-        std::vector <unsigned short> getKey() const;
+
+        std::vector <unsigned short> getKey() const; // Generates a key corresponding to level state
+        bool isSquareWalkable(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos, qu'il est posible de se déplacer dessus
+        bool isSquareGround(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est une ase de sol
+        bool isSquareBox(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos  est une caisse
+        bool isSquareGoal(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est une case but
+        bool isSquareWall(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est un mure
+        bool isSquareBoxPlaced(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est une caisse placée sur une case goal
+        bool isSquareDeadSquare(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est un deadlock
+        unsigned char getCol () const;
 
         // Other getters
         const std::string& getLevelPath() const;
         unsigned short getPosPlayer() const;
         unsigned int getSize() const;
-        unsigned char getCol() const; // Useful
         void setSquare(unsigned short pos, unsigned char s);
         const std::vector<unsigned char>& getField() const;
         const std::vector<unsigned short>& getGoals() const;
@@ -153,4 +162,8 @@ inline bool Maze::isSquareBoxPlaced(unsigned short pos) const
     return (this->m_field[pos] == SPRITE_BOX_PLACED ? true : false);
 }
 
+inline bool Maze::isSquareDeadSquare(unsigned short pos) const
+{
+    return (this->m_field[pos] == SPRITE_DEADSQUARE ? true : false);
+}
 #endif // MAZE_H_INCLUDED

@@ -50,6 +50,14 @@ int main()
                         break;
                     case KEY_F:
                         win = m.bruteForce(m, g);
+                        if (win==false)
+                            g.keyGet(KEY_ESC);
+                        break;
+                    case KEY_R:
+                        m.resetNiveau(m);
+                        break;
+                    case KEY_G:
+                        m.detectDeadlocks();
                         break;
                     case KEY_B:
                         win = m.solveBFS(m,g);

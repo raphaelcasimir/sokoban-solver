@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # depslib dependency file v1.0
 1450038096 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\main.cpp
 	<iostream>
@@ -1849,3 +1850,3781 @@
 	<fstream>
 	<iomanip>
 
+=======
+<<<<<<< HEAD
+# depslib dependency file v1.0
+1450038096 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\main.cpp
+	<iostream>
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"maze.h"
+	"solver.h"
+	"hashFunction.h"
+	<chrono>
+	<ctime>
+	<cstdlib>
+	<sstream>
+	"utils/helper.h"
+	"utils/coord.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"graph.h"
+	"utils/helper.h"
+	"heuristic/heuristic.h"
+	"search.h"
+	"benchmark.h"
+	"deadlock/deadlockMpdb.h"
+
+1448801751 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1448801744 z:\informatique\programmation\projets\c++\new_sokoban_solver\graphic.h
+	<allegro.h>
+	<string>
+
+1446162578 z:\informatique\programmation\projets\c++\new_sokoban_solver\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1445875862 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\logger.cpp
+	"logger.h"
+
+1449926776 z:\informatique\programmation\projets\c++\new_sokoban_solver\maze.h
+	<vector>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1450006310 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"deadlock/deadlockmpdb.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1446123937 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1446123942 z:\informatique\programmation\projets\c++\new_sokoban_solver\console.h
+	<iostream>
+
+1450023057 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\node.cpp
+	"node.h"
+	<sstream>
+
+1450019801 z:\informatique\programmation\projets\c++\new_sokoban_solver\node.h
+	<vector>
+	<algorithm>
+	"hashFunction.h"
+	"type.h"
+	"sort_swap.h"
+
+1450024118 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solver.cpp
+	"solver.h"
+	"node.h"
+	"heuristic/heuristic.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"pathfinding.h"
+	"utils/logger.h"
+	"debugMacro.h"
+	<chrono>
+	<fstream>
+	<sstream>
+	"myVector.h"
+	"graph.h"
+	"solver/solverMiniFast.h"
+
+1449439301 z:\informatique\programmation\projets\c++\new_sokoban_solver\solver.h
+	<queue>
+	<list>
+	"maze.h"
+
+1449345453 z:\informatique\programmation\projets\c++\new_sokoban_solver\type.h
+	"graphic.h"
+
+1446149130 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\helper.cpp
+	"helper.h"
+	<sstream>
+	<fstream>
+
+1447270731 z:\informatique\programmation\projets\c++\new_sokoban_solver\helper.h
+	<vector>
+	<iostream>
+	<string>
+	"type.h"
+
+1446979865 z:\informatique\programmation\projets\c++\new_sokoban_solver\sort_swap.h
+	"myVector.h"
+
+1447615778 z:\informatique\programmation\projets\c++\new_sokoban_solver\pathfinding.h
+	"type.h"
+	<vector>
+	<map>
+	<list>
+
+1447615882 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\pathfinding.cpp
+	"pathfinding.h"
+	<algorithm>
+	"utils/logger.h"
+
+1446378077 z:\informatique\programmation\projets\c++\new_sokoban_solver\container.h
+	<string>
+	<fstream>
+	<queue>
+	<stack>
+	<unordered_set>
+
+1446821210 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo.cpp
+	"algo.h"
+
+1446821420 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo.h
+	"node.h"
+	"maze.h"
+	"console.h"
+	"solver.h"
+
+1446821654 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algoforward.cpp
+	"algoforward.h"
+
+1446820975 z:\informatique\programmation\projets\c++\new_sokoban_solver\algoforward.h
+	"algo.h"
+
+1446821781 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446821097 z:\informatique\programmation\projets\c++\new_sokoban_solver\algofwbfs.h
+	"algoforward.h"
+
+1446822052 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algoreverse.cpp
+	"algoreverse.h"
+
+1446822052 z:\informatique\programmation\projets\c++\new_sokoban_solver\algoreverse.h
+	"algo.h"
+
+1446822151 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446822205 z:\informatique\programmation\projets\c++\new_sokoban_solver\algorvbfs.h
+	"algoreverse.h"
+
+1446822603 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algobidirectbfs.cpp
+	"algobidirectbfs.h"
+	<queue>
+
+1446822825 z:\informatique\programmation\projets\c++\new_sokoban_solver\algobidirectbfs.h
+	"algoforward.h"
+	"algoreverse.h"
+
+1450004715 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algo.cpp
+	"algo.h"
+	"../utils/helper.h"
+
+1449345460 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algo.h
+	<unordered_set>
+	"../node.h"
+	"../maze.h"
+	"../debugMacro.h"
+	"../utils/logger.h"
+	"../utils/coord.h"
+	"../utils/custom_allocator.h"
+
+1446848352 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirectbfs.cpp
+	"algobidirectbfs.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446902937 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirectbfs.h
+	"algoforward.h"
+	"algoreverse.h"
+
+1449933780 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoforward.h
+	"algo.h"
+
+1448636645 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoreverse.h
+	"algo.h"
+	<set>
+
+1450036433 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoforward.cpp
+	"algoforward.h"
+	"../deadlock/deadlockmpdb.h"
+	"../solver/solverminifast.h"
+
+1450004759 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446920807 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwbfs.h
+	"algoforward.h"
+
+1449354210 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoreverse.cpp
+	"algoreverse.h"
+	<fstream>
+	"../solver/solverminifast.h"
+
+1448643859 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvbfs.h
+	"algoreverse.h"
+
+1447593573 z:\informatique\programmation\projets\c++\new_sokoban_solver\debugmacro.h
+	"utils/console.h"
+	"utils/coord.h"
+
+1449353932 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwdfs.cpp
+	"algofwdfs.h"
+	<stack>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwdfs.h
+	"algoforward.h"
+
+1449354100 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirect.cpp
+	"algobidirect.h"
+	"algoforward.h"
+	"algoreverse.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446921267 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirect.h
+	"algo.h"
+	<queue>
+
+1446921911 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvdfs.cpp
+	"algorvdfs.h"
+	<stack>
+
+1446920803 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvdfs.h
+	"algoreverse.h"
+
+1450036618 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\deadlock\deadlockmpdb.cpp
+	"deadlockmpdb.h"
+	"../utils/logger.h"
+	<fstream>
+
+1449952144 z:\informatique\programmation\projets\c++\new_sokoban_solver\deadlock\deadlockmpdb.h
+	<vector>
+	<unordered_set>
+	<unordered_map>
+	<map>
+	"../node.h"
+	"../sort_swap.h"
+	"../utils/helper.h"
+
+1449336205 z:\informatique\programmation\projets\c++\new_sokoban_solver\myvector.h
+	<iostream>
+	<vector>
+
+1448055796 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\goalordering.cpp
+	"goalOrdering.h"
+	"solverminifast.h"
+	"utils/coord.h"
+
+1447612123 z:\informatique\programmation\projets\c++\new_sokoban_solver\goalordering.h
+	<vector>
+	<algorithm>
+	<iostream>
+	"type.h"
+	"utils/logger.h"
+	"maze.h"
+
+1449334453 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\hashfunction.cpp
+	"hashFunction.h"
+	<random>
+	<iostream>
+
+1449334696 z:\informatique\programmation\projets\c++\new_sokoban_solver\hashfunction.h
+	"type.h"
+	"myVector.h"
+
+1448636670 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solvermini.cpp
+	"solverMini.h"
+	"utils/logger.h"
+	<chrono>
+	<queue>
+	"utils/coord.h"
+
+1447274943 z:\informatique\programmation\projets\c++\new_sokoban_solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"maze.h"
+	"node.h"
+
+1448792522 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solverminifast.cpp
+	"solverminifast.h"
+	"utils/logger.h"
+	"utils/helper.h"
+	"utils/coord.h"
+
+1448792546 z:\informatique\programmation\projets\c++\new_sokoban_solver\solverminifast.h
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"type.h"
+	"hashFunction.h"
+
+1447587577 z:\informatique\programmation\projets\c++\new_sokoban_solver\coord.h
+	"type.h"
+
+1449925669 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\coord.h
+	"../type.h"
+
+1447587733 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\coord.cpp
+	"coord.h"
+
+1449419249 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\helper.h
+	<vector>
+	<iostream>
+	<string>
+	"../type.h"
+
+1449317329 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1448630740 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1449962283 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\console.h
+	<iostream>
+
+1449962430 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1445875862 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\logger.cpp
+	"logger.h"
+
+1448028385 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwbfsgreedy.cpp
+	"algofwbfsgreedy.h"
+	<queue>
+	<iomanip>
+	<cmath>
+	"../../heuristic/heuristicManhattan.h"
+
+1448033793 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwbfsgreedy.h
+	"../algoforward.h"
+
+1450040138 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristic.cpp
+	"heuristic.h"
+	"../solver/solverminifast.h"
+	"../utils/console.h"
+	<iomanip>
+
+1449440972 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristic.h
+	"../type.h"
+	"../maze.h"
+	"../node.h"
+	"../utils/coord.h"
+	"../utils/hungarian_.h"
+	<vector>
+
+1448040710 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattan.cpp
+	"heuristicManhattan.h"
+
+1448040736 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattan.h
+	"heuristic.h"
+
+1450004733 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformed.cpp
+	"algofwinformed.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+	"../../deadlock/deadlockmpdb.h"
+
+1449343800 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformed.h
+	"../algoforward.h"
+
+1448804831 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanimprove.cpp
+	"heuristicManhattanImprove.h"
+	"../pathFinding.h"
+
+1448796596 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanimprove.h
+	"heuristic.h"
+	"../utils/hungarian_.h"
+
+1449247215 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanreal.cpp
+	"heuristicManhattanReal.h"
+	"../solver/solverminifast.h"
+
+1448788913 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanreal.h
+	"heuristic.h"
+	"../utils/hungarian_.h"
+
+1449415851 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\hungarian_.h
+	<vector>
+	"../type.h"
+
+1449415866 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\hungarian_.cpp
+	<stdio.h>
+	<stdlib.h>
+	"hungarian_.h"
+	<iostream>
+
+1448630940 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\custom_allocator.h
+	<memory>
+	<vector>
+
+1450017729 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\graph.cpp
+	"graph.h"
+	"goalRoomOrdering.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1450012602 z:\informatique\programmation\projets\c++\new_sokoban_solver\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1449429728 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\goalroomordering.cpp
+	"goalRoomOrdering.h"
+	"graph.h"
+	"solver/solverminifast.h"
+	"utils/coord.h"
+	"utils/logger.h"
+
+1448734016 z:\informatique\programmation\projets\c++\new_sokoban_solver\goalroomordering.h
+	<vector>
+	<iostream>
+	"type.h"
+
+1450009677 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\benchmark.cpp
+	"benchmark.h"
+	"solver.h"
+	"solver/solverminifast.h"
+	"hashFunction.h"
+	"utils/logger.h"
+	<fstream>
+	<sstream>
+	<chrono>
+
+1450001800 z:\informatique\programmation\projets\c++\new_sokoban_solver\benchmark.h
+	<string>
+
+1449247119 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solvermini.cpp
+	"solverMini.h"
+	"../utils/logger.h"
+	<chrono>
+	<queue>
+	"../utils/coord.h"
+
+1449247112 z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"../maze.h"
+	"../node.h"
+
+1449317446 z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+	"../hashFunction.h"
+
+1449429654 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1449326991 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\matrix.cpp
+	"matrix.h"
+	<cassert>
+	<cstdlib>
+	<algorithm>
+
+1449326973 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\matrix.h
+
+1449327103 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\munkres.cpp
+	"Munkres.h"
+	"Matrix.cpp"
+	<iostream>
+
+1449327076 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\munkres.h
+	"Matrix.h"
+	<list>
+	<utility>
+
+1449326991 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\matrix.cpp
+	"matrix.h"
+	<cassert>
+	<cstdlib>
+	<algorithm>
+
+1449430654 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformedida.cpp
+	"algofwinformedIDA.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+
+1449344338 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformedida.h
+	"../algoforward.h"
+
+1450038091 z:\informatique\programmation\projets\c++\new_sokoban_solver\search.h
+	"type.h"
+	"maze.h"
+	<vector>
+
+1450038126 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\search.cpp
+	"search.h"
+	"solver.h"
+	"utils/helper.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	"utils/console.h"
+	<chrono>
+	<algorithm>
+	<fstream>
+	<sstream>
+	<string>
+	"utils/thread/threadpool.h"
+	"deadlock/deadlockMpdb.h"
+	"heuristic/heuristic.h"
+
+1449007578 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\thread.cpp
+	"thread.h"
+	<iostream>
+
+1449005041 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\thread.h
+	<pthread.h>
+
+1449038582 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\threadpool.cpp
+	"threadpool.h"
+	<iostream>
+
+1449038589 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\threadpool.h
+	"thread.h"
+	<vector>
+
+1451133596 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algo.cpp
+	"algo.h"
+	"../utils/helper.h"
+	"../solver/solverminifast.h"
+	"../deadlock/deadlockMpdb.h"
+	"../deadlock/deadlock.h"
+
+1451133555 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algo.h
+	<unordered_set>
+	"../node.h"
+	"../maze.h"
+	"../debugMacro.h"
+	"../utils/logger.h"
+	"../utils/coord.h"
+	"../utils/custom_allocator.h"
+
+1451049739 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\node.h
+	<vector>
+	<algorithm>
+	"hashFunction.h"
+	"type.h"
+	"sort_swap.h"
+
+1449334696 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\hashfunction.h
+	"type.h"
+	"myVector.h"
+
+1451068221 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\type.h
+	"graphic.h"
+
+1448801744 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graphic.h
+	<allegro.h>
+	<string>
+
+1451137873 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\myvector.h
+	<iostream>
+	<vector>
+
+1446979865 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\sort_swap.h
+	"myVector.h"
+
+1451159368 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\maze.h
+	<vector>
+	<list>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1451126344 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\debugmacro.h
+	"utils/console.h"
+	"utils/coord.h"
+	<stdio.h>
+
+1449962283 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\console.h
+	<iostream>
+
+1450976014 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\coord.h
+	"../type.h"
+
+1448630740 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1448630940 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\custom_allocator.h
+	<memory>
+	<vector>
+
+1451233245 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1449354100 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algobidirect.cpp
+	"algobidirect.h"
+	"algoforward.h"
+	"algoreverse.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446921267 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algobidirect.h
+	"algo.h"
+	<queue>
+
+1451164844 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoforward.h
+	"algo.h"
+
+1448636645 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoreverse.h
+	"algo.h"
+	<set>
+
+1451231246 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoforward.cpp
+	"algoforward.h"
+	"../deadlock/deadlockmpdb.h"
+	"../solver/solverminifast.h"
+	"../deadlock/deadlock.h"
+	"../solver/solvermini.h"
+	"../solver.h"
+	"../heuristic/heuristic.h"
+	<sstream>
+	"../pathfinding.h"
+
+1451083665 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlockmpdb.h
+	<set>
+	<vector>
+	<unordered_set>
+	<unordered_map>
+	<map>
+	"../node.h"
+	"../sort_swap.h"
+	"../utils/helper.h"
+
+1450620821 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+	"../hashFunction.h"
+
+1450004759 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446920807 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwbfs.h
+	"algoforward.h"
+
+1449353932 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwdfs.cpp
+	"algofwdfs.h"
+	<stack>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwdfs.h
+	"algoforward.h"
+
+1450040629 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoreverse.cpp
+	"algoreverse.h"
+	<fstream>
+	"../solver/solverminifast.h"
+
+1448643859 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvbfs.h
+	"algoreverse.h"
+
+1446921911 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvdfs.cpp
+	"algorvdfs.h"
+	<stack>
+
+1446920803 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvdfs.h
+	"algoreverse.h"
+
+1451221968 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformed.cpp
+	"algofwinformed.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+	"../../deadlock/deadlockmpdb.h"
+
+1449343800 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformed.h
+	"../algoforward.h"
+
+1451231693 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\heuristic\heuristic.h
+	"../type.h"
+	"../maze.h"
+	"../node.h"
+	"../utils/coord.h"
+	"../utils/hungarian_.h"
+	<vector>
+
+1451223768 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\hungarian_.h
+	<vector>
+	"../type.h"
+
+1450694839 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformedida.cpp
+	"algofwinformedIDA.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+
+1449344338 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformedida.h
+	"../algoforward.h"
+
+1450009677 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\benchmark.cpp
+	"benchmark.h"
+	"solver.h"
+	"solver/solverminifast.h"
+	"hashFunction.h"
+	"utils/logger.h"
+	<fstream>
+	<sstream>
+	<chrono>
+
+1450001800 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\benchmark.h
+	<string>
+
+1450952185 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver.h
+	<queue>
+	<list>
+	"maze.h"
+
+1451234736 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlockmpdb.cpp
+	"deadlockmpdb.h"
+	"../utils/logger.h"
+	<fstream>
+	<sstream>
+
+1449429728 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\goalroomordering.cpp
+	"goalRoomOrdering.h"
+	"graph.h"
+	"solver/solverminifast.h"
+	"utils/coord.h"
+	"utils/logger.h"
+
+1448734016 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\goalroomordering.h
+	<vector>
+	<iostream>
+	"type.h"
+
+1450465820 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1450894559 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graph.cpp
+	"graph.h"
+	"goalRoomOrdering.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1448801751 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1449334453 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\hashfunction.cpp
+	"hashFunction.h"
+	<random>
+	<iostream>
+
+1451231696 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\heuristic\heuristic.cpp
+	"heuristic.h"
+	"../solver/solverminifast.h"
+	"../utils/console.h"
+	<iomanip>
+
+1451164005 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"deadlock/deadlockmpdb.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1451155152 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\node.cpp
+	"node.h"
+	<sstream>
+
+1450615340 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\pathfinding.cpp
+	"pathfinding.h"
+	<algorithm>
+	"utils/logger.h"
+
+1447615778 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\pathfinding.h
+	"type.h"
+	<vector>
+	<map>
+	<list>
+
+1451225515 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\search.cpp
+	"search.h"
+	"solver.h"
+	"utils/helper.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	"utils/console.h"
+	<chrono>
+	<algorithm>
+	<fstream>
+	<sstream>
+	<string>
+	"utils/thread/threadpool.h"
+	"deadlock/deadlockMpdb.h"
+	"heuristic/heuristic.h"
+	"deadlock/deadlock.h"
+
+1450038091 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\search.h
+	"type.h"
+	"maze.h"
+	<vector>
+
+1449038589 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\threadpool.h
+	"thread.h"
+	<vector>
+
+1449005041 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\thread.h
+	<pthread.h>
+
+1451231717 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver.cpp
+	"solver.h"
+	"node.h"
+	"heuristic/heuristic.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"pathfinding.h"
+	"utils/logger.h"
+	"debugMacro.h"
+	<chrono>
+	<fstream>
+	<sstream>
+	"myVector.h"
+	"graph.h"
+	"solver/solverMiniFast.h"
+
+1449247119 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solvermini.cpp
+	"solverMini.h"
+	"../utils/logger.h"
+	<chrono>
+	<queue>
+	"../utils/coord.h"
+
+1449247112 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"../maze.h"
+	"../node.h"
+
+1450620822 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1449962430 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1447587733 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\coord.cpp
+	"coord.h"
+
+1451136340 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1451223768 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\hungarian_.cpp
+	<stdio.h>
+	<stdlib.h>
+	"hungarian_.h"
+	<iostream>
+
+1445875862 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\logger.cpp
+	"logger.h"
+
+1449007578 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\thread.cpp
+	"thread.h"
+	<iostream>
+
+1449038582 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\threadpool.cpp
+	"threadpool.h"
+	<iostream>
+
+1451232697 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\main.cpp
+	<iostream>
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"maze.h"
+	"solver.h"
+	"hashFunction.h"
+	<chrono>
+	<ctime>
+	<cstdlib>
+	<sstream>
+	"utils/helper.h"
+	"utils/coord.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"graph.h"
+	"utils/helper.h"
+	"heuristic/heuristic.h"
+	"search.h"
+	"benchmark.h"
+	"deadlock/deadlockMpdb.h"
+	"deadlock/deadlock.h"
+
+1451232249 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlock.cpp
+	"deadlock.h"
+	"deadlockmpdb.h"
+	"../utils/coord.h"
+	"../debugMacro.h"
+
+1451232123 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlock.h
+	<vector>
+	"../maze.h"
+	"../type.h"
+
+1452076237 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algo.cpp
+	"algo.h"
+	"../utils/helper.h"
+	"../solver/solverminifast.h"
+
+1451133556 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algo.h
+	<unordered_set>
+	"../node.h"
+	"../maze.h"
+	"../debugMacro.h"
+	"../utils/logger.h"
+	"../utils/coord.h"
+	"../utils/custom_allocator.h"
+
+1451049740 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\node.h
+	<vector>
+	<algorithm>
+	"hashFunction.h"
+	"type.h"
+	"sort_swap.h"
+
+1449334698 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\hashfunction.h
+	"type.h"
+	"myVector.h"
+
+1451068222 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1448801746 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1451137874 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\myvector.h
+	<iostream>
+	<vector>
+
+1446979866 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\sort_swap.h
+	"myVector.h"
+
+1452077739 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<list>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1451126346 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\debugmacro.h
+	"utils/console.h"
+	"utils/coord.h"
+	<stdio.h>
+
+1449962284 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1450976016 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\coord.h
+	"../type.h"
+
+1448630742 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1448630942 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\custom_allocator.h
+	<memory>
+	<vector>
+
+1451233246 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1452076893 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+
+1451083666 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\deadlock\deadlockmpdb.h
+	<set>
+	<vector>
+	<unordered_set>
+	<unordered_map>
+	<map>
+	"../node.h"
+	"../sort_swap.h"
+	"../utils/helper.h"
+
+1451232124 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\deadlock\deadlock.h
+	<vector>
+	"../maze.h"
+	"../type.h"
+
+1449354102 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algobidirect.cpp
+	"algobidirect.h"
+	"algoforward.h"
+	"algoreverse.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446921268 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algobidirect.h
+	"algo.h"
+	<queue>
+
+1451164846 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoforward.h
+	"algo.h"
+
+1448636646 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoreverse.h
+	"algo.h"
+	<set>
+
+1452076470 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoforward.cpp
+	"algoforward.h"
+	"../solver/solverminifast.h"
+	"../solver/solvermini.h"
+	"../solver.h"
+	"../heuristic/heuristic.h"
+	<sstream>
+	"../pathfinding.h"
+
+1449247114 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"../maze.h"
+	"../node.h"
+
+1450952186 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver.h
+	<queue>
+	<list>
+	"maze.h"
+
+1451231694 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\heuristic\heuristic.h
+	"../type.h"
+	"../maze.h"
+	"../node.h"
+	"../utils/coord.h"
+	"../utils/hungarian_.h"
+	<vector>
+
+1451223770 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\hungarian_.h
+	<vector>
+	"../type.h"
+
+1447615780 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\pathfinding.h
+	"type.h"
+	<vector>
+	<map>
+	<list>
+
+1450004760 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446920808 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwbfs.h
+	"algoforward.h"
+
+1449353934 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwdfs.cpp
+	"algofwdfs.h"
+	<stack>
+
+1446920808 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwdfs.h
+	"algoforward.h"
+
+1450040630 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoreverse.cpp
+	"algoreverse.h"
+	<fstream>
+	"../solver/solverminifast.h"
+
+1448643860 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446920808 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvbfs.h
+	"algoreverse.h"
+
+1446921912 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvdfs.cpp
+	"algorvdfs.h"
+	<stack>
+
+1446920804 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvdfs.h
+	"algoreverse.h"
+
+1451221970 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformed.cpp
+	"algofwinformed.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+	"../../deadlock/deadlockmpdb.h"
+
+1449343802 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformed.h
+	"../algoforward.h"
+
+1450694840 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformedida.cpp
+	"algofwinformedIDA.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+
+1449344340 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformedida.h
+	"../algoforward.h"
+
+1450009678 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\benchmark.cpp
+	"benchmark.h"
+	"solver.h"
+	"solver/solverminifast.h"
+	"hashFunction.h"
+	"utils/logger.h"
+	<fstream>
+	<sstream>
+	<chrono>
+
+1450001802 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\benchmark.h
+	<string>
+
+1449429730 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\goalroomordering.cpp
+	"goalRoomOrdering.h"
+	"graph.h"
+	"solver/solverminifast.h"
+	"utils/coord.h"
+	"utils/logger.h"
+
+1448734018 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\goalroomordering.h
+	<vector>
+	<iostream>
+	"type.h"
+
+1450465822 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1452076919 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graph.cpp
+	"graph.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1448801752 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1449334454 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\hashfunction.cpp
+	"hashFunction.h"
+	<random>
+	<iostream>
+
+1451231698 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\heuristic\heuristic.cpp
+	"heuristic.h"
+	"../solver/solverminifast.h"
+	"../utils/console.h"
+	<iomanip>
+
+1452077892 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\main.cpp
+	"graph.h"
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1450038092 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\search.h
+	"type.h"
+	"maze.h"
+	<vector>
+
+1452077640 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1451155154 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\node.cpp
+	"node.h"
+	<sstream>
+
+1450615342 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\pathfinding.cpp
+	"pathfinding.h"
+	<algorithm>
+	"utils/logger.h"
+
+1451225516 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\search.cpp
+	"search.h"
+	"solver.h"
+	"utils/helper.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	"utils/console.h"
+	<chrono>
+	<algorithm>
+	<fstream>
+	<sstream>
+	<string>
+	"utils/thread/threadpool.h"
+	"deadlock/deadlockMpdb.h"
+	"heuristic/heuristic.h"
+	"deadlock/deadlock.h"
+
+1449038590 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\threadpool.h
+	"thread.h"
+	<vector>
+
+1449005042 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\thread.h
+	<pthread.h>
+
+1451231718 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver.cpp
+	"solver.h"
+	"node.h"
+	"heuristic/heuristic.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"pathfinding.h"
+	"utils/logger.h"
+	"debugMacro.h"
+	<chrono>
+	<fstream>
+	<sstream>
+	"myVector.h"
+	"graph.h"
+	"solver/solverMiniFast.h"
+
+1450620824 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1449962432 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1447587734 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1451136342 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1451223770 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\hungarian_.cpp
+	<stdio.h>
+	<stdlib.h>
+	"hungarian_.h"
+	<iostream>
+
+1445875864 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1449007580 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\thread.cpp
+	"thread.h"
+	<iostream>
+
+1449038584 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\threadpool.cpp
+	"threadpool.h"
+	<iostream>
+
+1449247120 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solvermini.cpp
+	"solverMini.h"
+	"../utils/logger.h"
+	<chrono>
+	<queue>
+	"../utils/coord.h"
+
+1452767624 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graph.cpp
+	"graph.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<list>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\myvector.h
+	<iostream>
+	<vector>
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\coord.h
+	"../type.h"
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+
+1452767624 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1452767818 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\main.cpp
+	"graph.h"
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1452767624 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1452767626 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graph.cpp
+	"graph.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1454083537 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<string>
+	<set>
+	"type.h"
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\myvector.h
+	<iostream>
+	<vector>
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\coord.h
+	"../type.h"
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+
+1452767626 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1454083350 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1454083154 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<algorithm>
+	<iomanip>
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1454083352 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1455614898 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<string>
+	<set>
+
+1452767626 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1455615336 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<vector>
+	<iostream>
+	<string>
+
+1452767626 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1455615369 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\coord.h
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1455615171 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<algorithm>
+	<iomanip>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1455615350 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1452767626 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1456596714 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1456651226 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\maze.h
+	<vector>
+	<string>
+
+1456596973 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\console.h
+	<iostream>
+
+1455615336 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\helper.h
+	<vector>
+	<iostream>
+	<string>
+
+1455615369 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\coord.h
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1456596742 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\coord.cpp
+	"coord.h"
+
+1455615350 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\logger.cpp
+	"logger.h"
+
+1456596907 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\graphic.cpp
+	"graphic.h"
+
+1456600508 source:c:\users\alexandre\documents\travail\code blocks\sokoban\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\travail\code blocks\sokoban\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1461842985 source:c:\users\alexandre\documents\travail\code blocks\sokoban\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462042010 c:\users\alexandre\documents\travail\code blocks\sokoban\maze.h
+	<vector>
+	<string>
+
+1452771232 c:\users\alexandre\documents\travail\code blocks\sokoban\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\travail\code blocks\sokoban\utils\coord.h
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban\utils\coord.cpp
+	"coord.h"
+
+1462042429 source:c:\users\alexandre\documents\travail\code blocks\sokoban\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1456600508 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\travail\code blocks\sokoban test\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1461842985 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462043949 c:\users\alexandre\documents\travail\code blocks\sokoban test\maze.h
+	<vector>
+	<stack>
+	<string>
+
+1452771232 c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\coord.h
+
+1462044185 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\coord.cpp
+	"coord.h"
+
+1456600508 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1462109084 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462043949 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\maze.h
+	<vector>
+	<stack>
+	<string>
+
+1452771232 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\coord.h
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\coord.cpp
+	"coord.h"
+
+1462109210 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1456600508 source:c:\users\alexandre\documents\sokoban git\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\sokoban git\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1462109084 source:c:\users\alexandre\documents\sokoban git\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462043949 c:\users\alexandre\documents\sokoban git\maze.h
+	<vector>
+	<stack>
+	<string>
+
+1452771232 c:\users\alexandre\documents\sokoban git\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\sokoban git\utils\coord.h
+
+1462110004 source:c:\users\alexandre\documents\sokoban git\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1452771232 source:c:\users\alexandre\documents\sokoban git\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\sokoban git\utils\coord.cpp
+	"coord.h"
+
+=======
+# depslib dependency file v1.0
+1450038096 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\main.cpp
+	<iostream>
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"maze.h"
+	"solver.h"
+	"hashFunction.h"
+	<chrono>
+	<ctime>
+	<cstdlib>
+	<sstream>
+	"utils/helper.h"
+	"utils/coord.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"graph.h"
+	"utils/helper.h"
+	"heuristic/heuristic.h"
+	"search.h"
+	"benchmark.h"
+	"deadlock/deadlockMpdb.h"
+
+1448801751 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1448801744 z:\informatique\programmation\projets\c++\new_sokoban_solver\graphic.h
+	<allegro.h>
+	<string>
+
+1446162578 z:\informatique\programmation\projets\c++\new_sokoban_solver\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1445875862 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\logger.cpp
+	"logger.h"
+
+1449926776 z:\informatique\programmation\projets\c++\new_sokoban_solver\maze.h
+	<vector>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1450006310 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"deadlock/deadlockmpdb.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1446123937 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1446123942 z:\informatique\programmation\projets\c++\new_sokoban_solver\console.h
+	<iostream>
+
+1450023057 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\node.cpp
+	"node.h"
+	<sstream>
+
+1450019801 z:\informatique\programmation\projets\c++\new_sokoban_solver\node.h
+	<vector>
+	<algorithm>
+	"hashFunction.h"
+	"type.h"
+	"sort_swap.h"
+
+1450024118 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solver.cpp
+	"solver.h"
+	"node.h"
+	"heuristic/heuristic.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"pathfinding.h"
+	"utils/logger.h"
+	"debugMacro.h"
+	<chrono>
+	<fstream>
+	<sstream>
+	"myVector.h"
+	"graph.h"
+	"solver/solverMiniFast.h"
+
+1449439301 z:\informatique\programmation\projets\c++\new_sokoban_solver\solver.h
+	<queue>
+	<list>
+	"maze.h"
+
+1449345453 z:\informatique\programmation\projets\c++\new_sokoban_solver\type.h
+	"graphic.h"
+
+1446149130 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\helper.cpp
+	"helper.h"
+	<sstream>
+	<fstream>
+
+1447270731 z:\informatique\programmation\projets\c++\new_sokoban_solver\helper.h
+	<vector>
+	<iostream>
+	<string>
+	"type.h"
+
+1446979865 z:\informatique\programmation\projets\c++\new_sokoban_solver\sort_swap.h
+	"myVector.h"
+
+1447615778 z:\informatique\programmation\projets\c++\new_sokoban_solver\pathfinding.h
+	"type.h"
+	<vector>
+	<map>
+	<list>
+
+1447615882 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\pathfinding.cpp
+	"pathfinding.h"
+	<algorithm>
+	"utils/logger.h"
+
+1446378077 z:\informatique\programmation\projets\c++\new_sokoban_solver\container.h
+	<string>
+	<fstream>
+	<queue>
+	<stack>
+	<unordered_set>
+
+1446821210 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo.cpp
+	"algo.h"
+
+1446821420 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo.h
+	"node.h"
+	"maze.h"
+	"console.h"
+	"solver.h"
+
+1446821654 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algoforward.cpp
+	"algoforward.h"
+
+1446820975 z:\informatique\programmation\projets\c++\new_sokoban_solver\algoforward.h
+	"algo.h"
+
+1446821781 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446821097 z:\informatique\programmation\projets\c++\new_sokoban_solver\algofwbfs.h
+	"algoforward.h"
+
+1446822052 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algoreverse.cpp
+	"algoreverse.h"
+
+1446822052 z:\informatique\programmation\projets\c++\new_sokoban_solver\algoreverse.h
+	"algo.h"
+
+1446822151 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446822205 z:\informatique\programmation\projets\c++\new_sokoban_solver\algorvbfs.h
+	"algoreverse.h"
+
+1446822603 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algobidirectbfs.cpp
+	"algobidirectbfs.h"
+	<queue>
+
+1446822825 z:\informatique\programmation\projets\c++\new_sokoban_solver\algobidirectbfs.h
+	"algoforward.h"
+	"algoreverse.h"
+
+1450004715 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algo.cpp
+	"algo.h"
+	"../utils/helper.h"
+
+1449345460 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algo.h
+	<unordered_set>
+	"../node.h"
+	"../maze.h"
+	"../debugMacro.h"
+	"../utils/logger.h"
+	"../utils/coord.h"
+	"../utils/custom_allocator.h"
+
+1446848352 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirectbfs.cpp
+	"algobidirectbfs.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446902937 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirectbfs.h
+	"algoforward.h"
+	"algoreverse.h"
+
+1449933780 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoforward.h
+	"algo.h"
+
+1448636645 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoreverse.h
+	"algo.h"
+	<set>
+
+1450036433 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoforward.cpp
+	"algoforward.h"
+	"../deadlock/deadlockmpdb.h"
+	"../solver/solverminifast.h"
+
+1450004759 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446920807 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwbfs.h
+	"algoforward.h"
+
+1449354210 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algoreverse.cpp
+	"algoreverse.h"
+	<fstream>
+	"../solver/solverminifast.h"
+
+1448643859 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvbfs.h
+	"algoreverse.h"
+
+1447593573 z:\informatique\programmation\projets\c++\new_sokoban_solver\debugmacro.h
+	"utils/console.h"
+	"utils/coord.h"
+
+1449353932 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwdfs.cpp
+	"algofwdfs.h"
+	<stack>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algofwdfs.h
+	"algoforward.h"
+
+1449354100 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirect.cpp
+	"algobidirect.h"
+	"algoforward.h"
+	"algoreverse.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446921267 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algobidirect.h
+	"algo.h"
+	<queue>
+
+1446921911 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvdfs.cpp
+	"algorvdfs.h"
+	<stack>
+
+1446920803 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\algorvdfs.h
+	"algoreverse.h"
+
+1450036618 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\deadlock\deadlockmpdb.cpp
+	"deadlockmpdb.h"
+	"../utils/logger.h"
+	<fstream>
+
+1449952144 z:\informatique\programmation\projets\c++\new_sokoban_solver\deadlock\deadlockmpdb.h
+	<vector>
+	<unordered_set>
+	<unordered_map>
+	<map>
+	"../node.h"
+	"../sort_swap.h"
+	"../utils/helper.h"
+
+1449336205 z:\informatique\programmation\projets\c++\new_sokoban_solver\myvector.h
+	<iostream>
+	<vector>
+
+1448055796 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\goalordering.cpp
+	"goalOrdering.h"
+	"solverminifast.h"
+	"utils/coord.h"
+
+1447612123 z:\informatique\programmation\projets\c++\new_sokoban_solver\goalordering.h
+	<vector>
+	<algorithm>
+	<iostream>
+	"type.h"
+	"utils/logger.h"
+	"maze.h"
+
+1449334453 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\hashfunction.cpp
+	"hashFunction.h"
+	<random>
+	<iostream>
+
+1449334696 z:\informatique\programmation\projets\c++\new_sokoban_solver\hashfunction.h
+	"type.h"
+	"myVector.h"
+
+1448636670 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solvermini.cpp
+	"solverMini.h"
+	"utils/logger.h"
+	<chrono>
+	<queue>
+	"utils/coord.h"
+
+1447274943 z:\informatique\programmation\projets\c++\new_sokoban_solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"maze.h"
+	"node.h"
+
+1448792522 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solverminifast.cpp
+	"solverminifast.h"
+	"utils/logger.h"
+	"utils/helper.h"
+	"utils/coord.h"
+
+1448792546 z:\informatique\programmation\projets\c++\new_sokoban_solver\solverminifast.h
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"type.h"
+	"hashFunction.h"
+
+1447587577 z:\informatique\programmation\projets\c++\new_sokoban_solver\coord.h
+	"type.h"
+
+1449925669 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\coord.h
+	"../type.h"
+
+1447587733 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\coord.cpp
+	"coord.h"
+
+1449419249 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\helper.h
+	<vector>
+	<iostream>
+	<string>
+	"../type.h"
+
+1449317329 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1448630740 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1449962283 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\console.h
+	<iostream>
+
+1449962430 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1445875862 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\logger.cpp
+	"logger.h"
+
+1448028385 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwbfsgreedy.cpp
+	"algofwbfsgreedy.h"
+	<queue>
+	<iomanip>
+	<cmath>
+	"../../heuristic/heuristicManhattan.h"
+
+1448033793 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwbfsgreedy.h
+	"../algoforward.h"
+
+1450040138 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristic.cpp
+	"heuristic.h"
+	"../solver/solverminifast.h"
+	"../utils/console.h"
+	<iomanip>
+
+1449440972 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristic.h
+	"../type.h"
+	"../maze.h"
+	"../node.h"
+	"../utils/coord.h"
+	"../utils/hungarian_.h"
+	<vector>
+
+1448040710 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattan.cpp
+	"heuristicManhattan.h"
+
+1448040736 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattan.h
+	"heuristic.h"
+
+1450004733 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformed.cpp
+	"algofwinformed.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+	"../../deadlock/deadlockmpdb.h"
+
+1449343800 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformed.h
+	"../algoforward.h"
+
+1448804831 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanimprove.cpp
+	"heuristicManhattanImprove.h"
+	"../pathFinding.h"
+
+1448796596 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanimprove.h
+	"heuristic.h"
+	"../utils/hungarian_.h"
+
+1449247215 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanreal.cpp
+	"heuristicManhattanReal.h"
+	"../solver/solverminifast.h"
+
+1448788913 z:\informatique\programmation\projets\c++\new_sokoban_solver\heuristic\heuristicmanhattanreal.h
+	"heuristic.h"
+	"../utils/hungarian_.h"
+
+1449415851 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\hungarian_.h
+	<vector>
+	"../type.h"
+
+1449415866 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\hungarian_.cpp
+	<stdio.h>
+	<stdlib.h>
+	"hungarian_.h"
+	<iostream>
+
+1448630940 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\custom_allocator.h
+	<memory>
+	<vector>
+
+1450017729 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\graph.cpp
+	"graph.h"
+	"goalRoomOrdering.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1450012602 z:\informatique\programmation\projets\c++\new_sokoban_solver\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1449429728 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\goalroomordering.cpp
+	"goalRoomOrdering.h"
+	"graph.h"
+	"solver/solverminifast.h"
+	"utils/coord.h"
+	"utils/logger.h"
+
+1448734016 z:\informatique\programmation\projets\c++\new_sokoban_solver\goalroomordering.h
+	<vector>
+	<iostream>
+	"type.h"
+
+1450009677 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\benchmark.cpp
+	"benchmark.h"
+	"solver.h"
+	"solver/solverminifast.h"
+	"hashFunction.h"
+	"utils/logger.h"
+	<fstream>
+	<sstream>
+	<chrono>
+
+1450001800 z:\informatique\programmation\projets\c++\new_sokoban_solver\benchmark.h
+	<string>
+
+1449247119 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solvermini.cpp
+	"solverMini.h"
+	"../utils/logger.h"
+	<chrono>
+	<queue>
+	"../utils/coord.h"
+
+1449247112 z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"../maze.h"
+	"../node.h"
+
+1449317446 z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+	"../hashFunction.h"
+
+1449429654 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1449326991 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\matrix.cpp
+	"matrix.h"
+	<cassert>
+	<cstdlib>
+	<algorithm>
+
+1449326973 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\matrix.h
+
+1449327103 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\munkres.cpp
+	"Munkres.h"
+	"Matrix.cpp"
+	<iostream>
+
+1449327076 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\munkres.h
+	"Matrix.h"
+	<list>
+	<utility>
+
+1449326991 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\matrix.cpp
+	"matrix.h"
+	<cassert>
+	<cstdlib>
+	<algorithm>
+
+1449430654 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformedida.cpp
+	"algofwinformedIDA.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+
+1449344338 z:\informatique\programmation\projets\c++\new_sokoban_solver\algo\informal\algofwinformedida.h
+	"../algoforward.h"
+
+1450038091 z:\informatique\programmation\projets\c++\new_sokoban_solver\search.h
+	"type.h"
+	"maze.h"
+	<vector>
+
+1450038126 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\search.cpp
+	"search.h"
+	"solver.h"
+	"utils/helper.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	"utils/console.h"
+	<chrono>
+	<algorithm>
+	<fstream>
+	<sstream>
+	<string>
+	"utils/thread/threadpool.h"
+	"deadlock/deadlockMpdb.h"
+	"heuristic/heuristic.h"
+
+1449007578 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\thread.cpp
+	"thread.h"
+	<iostream>
+
+1449005041 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\thread.h
+	<pthread.h>
+
+1449038582 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\threadpool.cpp
+	"threadpool.h"
+	<iostream>
+
+1449038589 z:\informatique\programmation\projets\c++\new_sokoban_solver\utils\thread\threadpool.h
+	"thread.h"
+	<vector>
+
+1451133596 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algo.cpp
+	"algo.h"
+	"../utils/helper.h"
+	"../solver/solverminifast.h"
+	"../deadlock/deadlockMpdb.h"
+	"../deadlock/deadlock.h"
+
+1451133555 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algo.h
+	<unordered_set>
+	"../node.h"
+	"../maze.h"
+	"../debugMacro.h"
+	"../utils/logger.h"
+	"../utils/coord.h"
+	"../utils/custom_allocator.h"
+
+1451049739 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\node.h
+	<vector>
+	<algorithm>
+	"hashFunction.h"
+	"type.h"
+	"sort_swap.h"
+
+1449334696 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\hashfunction.h
+	"type.h"
+	"myVector.h"
+
+1451068221 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\type.h
+	"graphic.h"
+
+1448801744 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graphic.h
+	<allegro.h>
+	<string>
+
+1451137873 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\myvector.h
+	<iostream>
+	<vector>
+
+1446979865 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\sort_swap.h
+	"myVector.h"
+
+1451159368 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\maze.h
+	<vector>
+	<list>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1451126344 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\debugmacro.h
+	"utils/console.h"
+	"utils/coord.h"
+	<stdio.h>
+
+1449962283 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\console.h
+	<iostream>
+
+1450976014 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\coord.h
+	"../type.h"
+
+1448630740 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1448630940 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\custom_allocator.h
+	<memory>
+	<vector>
+
+1451233245 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1449354100 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algobidirect.cpp
+	"algobidirect.h"
+	"algoforward.h"
+	"algoreverse.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446921267 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algobidirect.h
+	"algo.h"
+	<queue>
+
+1451164844 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoforward.h
+	"algo.h"
+
+1448636645 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoreverse.h
+	"algo.h"
+	<set>
+
+1451231246 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoforward.cpp
+	"algoforward.h"
+	"../deadlock/deadlockmpdb.h"
+	"../solver/solverminifast.h"
+	"../deadlock/deadlock.h"
+	"../solver/solvermini.h"
+	"../solver.h"
+	"../heuristic/heuristic.h"
+	<sstream>
+	"../pathfinding.h"
+
+1451083665 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlockmpdb.h
+	<set>
+	<vector>
+	<unordered_set>
+	<unordered_map>
+	<map>
+	"../node.h"
+	"../sort_swap.h"
+	"../utils/helper.h"
+
+1450620821 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+	"../hashFunction.h"
+
+1450004759 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446920807 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwbfs.h
+	"algoforward.h"
+
+1449353932 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwdfs.cpp
+	"algofwdfs.h"
+	<stack>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algofwdfs.h
+	"algoforward.h"
+
+1450040629 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algoreverse.cpp
+	"algoreverse.h"
+	<fstream>
+	"../solver/solverminifast.h"
+
+1448643859 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446920806 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvbfs.h
+	"algoreverse.h"
+
+1446921911 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvdfs.cpp
+	"algorvdfs.h"
+	<stack>
+
+1446920803 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\algorvdfs.h
+	"algoreverse.h"
+
+1451221968 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformed.cpp
+	"algofwinformed.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+	"../../deadlock/deadlockmpdb.h"
+
+1449343800 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformed.h
+	"../algoforward.h"
+
+1451231693 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\heuristic\heuristic.h
+	"../type.h"
+	"../maze.h"
+	"../node.h"
+	"../utils/coord.h"
+	"../utils/hungarian_.h"
+	<vector>
+
+1451223768 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\hungarian_.h
+	<vector>
+	"../type.h"
+
+1450694839 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformedida.cpp
+	"algofwinformedIDA.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+
+1449344338 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\algo\informal\algofwinformedida.h
+	"../algoforward.h"
+
+1450009677 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\benchmark.cpp
+	"benchmark.h"
+	"solver.h"
+	"solver/solverminifast.h"
+	"hashFunction.h"
+	"utils/logger.h"
+	<fstream>
+	<sstream>
+	<chrono>
+
+1450001800 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\benchmark.h
+	<string>
+
+1450952185 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver.h
+	<queue>
+	<list>
+	"maze.h"
+
+1451234736 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlockmpdb.cpp
+	"deadlockmpdb.h"
+	"../utils/logger.h"
+	<fstream>
+	<sstream>
+
+1449429728 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\goalroomordering.cpp
+	"goalRoomOrdering.h"
+	"graph.h"
+	"solver/solverminifast.h"
+	"utils/coord.h"
+	"utils/logger.h"
+
+1448734016 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\goalroomordering.h
+	<vector>
+	<iostream>
+	"type.h"
+
+1450465820 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1450894559 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graph.cpp
+	"graph.h"
+	"goalRoomOrdering.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1448801751 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1449334453 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\hashfunction.cpp
+	"hashFunction.h"
+	<random>
+	<iostream>
+
+1451231696 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\heuristic\heuristic.cpp
+	"heuristic.h"
+	"../solver/solverminifast.h"
+	"../utils/console.h"
+	<iomanip>
+
+1451164005 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"deadlock/deadlockmpdb.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1451155152 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\node.cpp
+	"node.h"
+	<sstream>
+
+1450615340 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\pathfinding.cpp
+	"pathfinding.h"
+	<algorithm>
+	"utils/logger.h"
+
+1447615778 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\pathfinding.h
+	"type.h"
+	<vector>
+	<map>
+	<list>
+
+1451225515 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\search.cpp
+	"search.h"
+	"solver.h"
+	"utils/helper.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	"utils/console.h"
+	<chrono>
+	<algorithm>
+	<fstream>
+	<sstream>
+	<string>
+	"utils/thread/threadpool.h"
+	"deadlock/deadlockMpdb.h"
+	"heuristic/heuristic.h"
+	"deadlock/deadlock.h"
+
+1450038091 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\search.h
+	"type.h"
+	"maze.h"
+	<vector>
+
+1449038589 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\threadpool.h
+	"thread.h"
+	<vector>
+
+1449005041 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\thread.h
+	<pthread.h>
+
+1451231717 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver.cpp
+	"solver.h"
+	"node.h"
+	"heuristic/heuristic.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"pathfinding.h"
+	"utils/logger.h"
+	"debugMacro.h"
+	<chrono>
+	<fstream>
+	<sstream>
+	"myVector.h"
+	"graph.h"
+	"solver/solverMiniFast.h"
+
+1449247119 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solvermini.cpp
+	"solverMini.h"
+	"../utils/logger.h"
+	<chrono>
+	<queue>
+	"../utils/coord.h"
+
+1449247112 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"../maze.h"
+	"../node.h"
+
+1450620822 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1449962430 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1447587733 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\coord.cpp
+	"coord.h"
+
+1451136340 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1451223768 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\hungarian_.cpp
+	<stdio.h>
+	<stdlib.h>
+	"hungarian_.h"
+	<iostream>
+
+1445875862 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\logger.cpp
+	"logger.h"
+
+1449007578 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\thread.cpp
+	"thread.h"
+	<iostream>
+
+1449038582 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\utils\thread\threadpool.cpp
+	"threadpool.h"
+	<iostream>
+
+1451232697 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\main.cpp
+	<iostream>
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"maze.h"
+	"solver.h"
+	"hashFunction.h"
+	<chrono>
+	<ctime>
+	<cstdlib>
+	<sstream>
+	"utils/helper.h"
+	"utils/coord.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"graph.h"
+	"utils/helper.h"
+	"heuristic/heuristic.h"
+	"search.h"
+	"benchmark.h"
+	"deadlock/deadlockMpdb.h"
+	"deadlock/deadlock.h"
+
+1451232249 source:z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlock.cpp
+	"deadlock.h"
+	"deadlockmpdb.h"
+	"../utils/coord.h"
+	"../debugMacro.h"
+
+1451232123 z:\informatique\programmation\projets\c++\new_sokoban_solver\projet\deadlock\deadlock.h
+	<vector>
+	"../maze.h"
+	"../type.h"
+
+1452076237 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algo.cpp
+	"algo.h"
+	"../utils/helper.h"
+	"../solver/solverminifast.h"
+
+1451133556 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algo.h
+	<unordered_set>
+	"../node.h"
+	"../maze.h"
+	"../debugMacro.h"
+	"../utils/logger.h"
+	"../utils/coord.h"
+	"../utils/custom_allocator.h"
+
+1451049740 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\node.h
+	<vector>
+	<algorithm>
+	"hashFunction.h"
+	"type.h"
+	"sort_swap.h"
+
+1449334698 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\hashfunction.h
+	"type.h"
+	"myVector.h"
+
+1451068222 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1448801746 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1451137874 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\myvector.h
+	<iostream>
+	<vector>
+
+1446979866 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\sort_swap.h
+	"myVector.h"
+
+1452077739 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<list>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1451126346 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\debugmacro.h
+	"utils/console.h"
+	"utils/coord.h"
+	<stdio.h>
+
+1449962284 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1450976016 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\coord.h
+	"../type.h"
+
+1448630742 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1448630942 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\custom_allocator.h
+	<memory>
+	<vector>
+
+1451233246 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1452076893 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+
+1451083666 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\deadlock\deadlockmpdb.h
+	<set>
+	<vector>
+	<unordered_set>
+	<unordered_map>
+	<map>
+	"../node.h"
+	"../sort_swap.h"
+	"../utils/helper.h"
+
+1451232124 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\deadlock\deadlock.h
+	<vector>
+	"../maze.h"
+	"../type.h"
+
+1449354102 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algobidirect.cpp
+	"algobidirect.h"
+	"algoforward.h"
+	"algoreverse.h"
+	<queue>
+	<stack>
+	<pthread.h>
+
+1446921268 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algobidirect.h
+	"algo.h"
+	<queue>
+
+1451164846 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoforward.h
+	"algo.h"
+
+1448636646 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoreverse.h
+	"algo.h"
+	<set>
+
+1452076470 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoforward.cpp
+	"algoforward.h"
+	"../solver/solverminifast.h"
+	"../solver/solvermini.h"
+	"../solver.h"
+	"../heuristic/heuristic.h"
+	<sstream>
+	"../pathfinding.h"
+
+1449247114 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solvermini.h
+	<vector>
+	<stack>
+	<unordered_set>
+	"../maze.h"
+	"../node.h"
+
+1450952186 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver.h
+	<queue>
+	<list>
+	"maze.h"
+
+1451231694 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\heuristic\heuristic.h
+	"../type.h"
+	"../maze.h"
+	"../node.h"
+	"../utils/coord.h"
+	"../utils/hungarian_.h"
+	<vector>
+
+1451223770 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\hungarian_.h
+	<vector>
+	"../type.h"
+
+1447615780 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\pathfinding.h
+	"type.h"
+	<vector>
+	<map>
+	<list>
+
+1450004760 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwbfs.cpp
+	"algofwbfs.h"
+	<queue>
+
+1446920808 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwbfs.h
+	"algoforward.h"
+
+1449353934 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwdfs.cpp
+	"algofwdfs.h"
+	<stack>
+
+1446920808 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algofwdfs.h
+	"algoforward.h"
+
+1450040630 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algoreverse.cpp
+	"algoreverse.h"
+	<fstream>
+	"../solver/solverminifast.h"
+
+1448643860 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvbfs.cpp
+	"algorvbfs.h"
+	<queue>
+
+1446920808 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvbfs.h
+	"algoreverse.h"
+
+1446921912 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvdfs.cpp
+	"algorvdfs.h"
+	<stack>
+
+1446920804 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\algorvdfs.h
+	"algoreverse.h"
+
+1451221970 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformed.cpp
+	"algofwinformed.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+	"../../deadlock/deadlockmpdb.h"
+
+1449343802 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformed.h
+	"../algoforward.h"
+
+1450694840 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformedida.cpp
+	"algofwinformedIDA.h"
+	"../../heuristic/heuristic.h"
+	<queue>
+
+1449344340 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\algo\informal\algofwinformedida.h
+	"../algoforward.h"
+
+1450009678 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\benchmark.cpp
+	"benchmark.h"
+	"solver.h"
+	"solver/solverminifast.h"
+	"hashFunction.h"
+	"utils/logger.h"
+	<fstream>
+	<sstream>
+	<chrono>
+
+1450001802 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\benchmark.h
+	<string>
+
+1449429730 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\goalroomordering.cpp
+	"goalRoomOrdering.h"
+	"graph.h"
+	"solver/solverminifast.h"
+	"utils/coord.h"
+	"utils/logger.h"
+
+1448734018 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\goalroomordering.h
+	<vector>
+	<iostream>
+	"type.h"
+
+1450465822 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1452076919 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graph.cpp
+	"graph.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1448801752 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1449334454 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\hashfunction.cpp
+	"hashFunction.h"
+	<random>
+	<iostream>
+
+1451231698 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\heuristic\heuristic.cpp
+	"heuristic.h"
+	"../solver/solverminifast.h"
+	"../utils/console.h"
+	<iomanip>
+
+1452077892 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\main.cpp
+	"graph.h"
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1450038092 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\search.h
+	"type.h"
+	"maze.h"
+	<vector>
+
+1452077640 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1451155154 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\node.cpp
+	"node.h"
+	<sstream>
+
+1450615342 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\pathfinding.cpp
+	"pathfinding.h"
+	<algorithm>
+	"utils/logger.h"
+
+1451225516 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\search.cpp
+	"search.h"
+	"solver.h"
+	"utils/helper.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	"utils/console.h"
+	<chrono>
+	<algorithm>
+	<fstream>
+	<sstream>
+	<string>
+	"utils/thread/threadpool.h"
+	"deadlock/deadlockMpdb.h"
+	"heuristic/heuristic.h"
+	"deadlock/deadlock.h"
+
+1449038590 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\threadpool.h
+	"thread.h"
+	<vector>
+
+1449005042 c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\thread.h
+	<pthread.h>
+
+1451231718 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver.cpp
+	"solver.h"
+	"node.h"
+	"heuristic/heuristic.h"
+	"algo/algofwbfs.h"
+	"algo/algofwdfs.h"
+	"algo/algorvbfs.h"
+	"algo/algorvdfs.h"
+	"algo/algobidirect.h"
+	"algo/informal/algofwinformed.h"
+	"algo/informal/algofwinformedIDA.h"
+	"pathfinding.h"
+	"utils/logger.h"
+	"debugMacro.h"
+	<chrono>
+	<fstream>
+	<sstream>
+	"myVector.h"
+	"graph.h"
+	"solver/solverMiniFast.h"
+
+1450620824 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1449962432 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1447587734 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1451136342 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1451223770 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\hungarian_.cpp
+	<stdio.h>
+	<stdlib.h>
+	"hungarian_.h"
+	<iostream>
+
+1445875864 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1449007580 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\thread.cpp
+	"thread.h"
+	<iostream>
+
+1449038584 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\utils\thread\threadpool.cpp
+	"threadpool.h"
+	<iostream>
+
+1449247120 source:c:\users\florent\desktop\mario sokoban projet\new_sokoban_solver_minimal_pierre\solver\solvermini.cpp
+	"solverMini.h"
+	"../utils/logger.h"
+	<chrono>
+	<queue>
+	"../utils/coord.h"
+
+1452767624 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graph.cpp
+	"graph.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<list>
+	<map>
+	<string>
+	<set>
+	"type.h"
+	"myVector.h"
+
+1452767624 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\myvector.h
+	<iostream>
+	<vector>
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\coord.h
+	"../type.h"
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+
+1452767624 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1452767818 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\main.cpp
+	"graph.h"
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1452767631 c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1452767624 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graph.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<list>
+	<queue>
+	<algorithm>
+	<iomanip>
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767631 source:c:\users\diedler\desktop\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1452767626 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graph.cpp
+	"graph.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<queue>
+	<algorithm>
+	"utils/helper.h"
+	"solver/solverminifast.h"
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graph.h
+	"type.h"
+	"maze.h"
+	<vector>
+	<set>
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1454083537 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<string>
+	<set>
+	"type.h"
+
+1452767626 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\myvector.h
+	<iostream>
+	<vector>
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\coord.h
+	"../type.h"
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<set>
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	<iomanip>
+	<sstream>
+	"../type.h"
+	"../myVector.h"
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.h
+	<stack>
+	<queue>
+	<algorithm>
+	<unordered_set>
+	"../type.h"
+
+1452767626 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1454083350 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1452767632 c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1454083154 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<algorithm>
+	<iomanip>
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\solver\solverminifast.cpp
+	"solverminifast.h"
+	"../utils/logger.h"
+	"../utils/helper.h"
+	"../utils/coord.h"
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767632 source:c:\users\11000383\desktop\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1454083352 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/helper.h"
+	"utils/coord.h"
+	"utils/logger.h"
+	<iostream>
+
+1455614898 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\maze.h
+	<vector>
+	<string>
+	<set>
+
+1452767626 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\graphic.h
+	<allegro.h>
+	<string>
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\console.h
+	<iostream>
+
+1455615336 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\helper.h
+	<vector>
+	<iostream>
+	<string>
+
+1452767626 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\type.h
+	"graphic.h"
+
+1455615369 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\coord.h
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1455615171 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/logger.h"
+	"utils/coord.h"
+	<fstream>
+	<algorithm>
+	<iomanip>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\coord.cpp
+	"coord.h"
+
+1455615350 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\utils\logger.cpp
+	"logger.h"
+
+1452767626 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_pierre\graphic.cpp
+	"graphic.h"
+	"utils/logger.h"
+
+1456596714 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1456651226 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\maze.h
+	<vector>
+	<string>
+
+1456596973 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\console.h
+	<iostream>
+
+1455615336 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\helper.h
+	<vector>
+	<iostream>
+	<string>
+
+1455615369 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\coord.h
+
+1452767632 c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\logger.h
+	<allegro.h>
+	<winalleg.h>
+	<iostream>
+	<unordered_set>
+
+1456596742 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\coord.cpp
+	"coord.h"
+
+1455615350 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\helper.cpp
+	"helper.h"
+	"coord.h"
+	<sstream>
+	<fstream>
+
+1452767632 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\utils\logger.cpp
+	"logger.h"
+
+1456596907 source:c:\users\florent\desktop\ece 2015-2016\ing2 info\theorie graphes\projet_ing2_sokoban\new_sokoban_solver_minimal_ece\graphic.cpp
+	"graphic.h"
+
+1456600508 source:c:\users\alexandre\documents\travail\code blocks\sokoban\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\travail\code blocks\sokoban\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1461661387 source:c:\users\alexandre\documents\travail\code blocks\sokoban\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1461661401 c:\users\alexandre\documents\travail\code blocks\sokoban\maze.h
+	<vector>
+	<string>
+
+1452771232 c:\users\alexandre\documents\travail\code blocks\sokoban\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\travail\code blocks\sokoban\utils\coord.h
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban\utils\coord.cpp
+	"coord.h"
+
+1461663370 source:c:\users\alexandre\documents\travail\code blocks\sokoban\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1461521873 source:d:\owncloud\documents\projets ece\sokoban-solver\graphic.cpp
+	"graphic.h"
+
+1461521873 d:\owncloud\documents\projets ece\sokoban-solver\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1461521873 source:d:\owncloud\documents\projets ece\sokoban-solver\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1461521873 d:\owncloud\documents\projets ece\sokoban-solver\utils\console.h
+	<iostream>
+
+1461521873 source:d:\owncloud\documents\projets ece\sokoban-solver\utils\coord.cpp
+	"coord.h"
+
+1461521873 d:\owncloud\documents\projets ece\sokoban-solver\utils\coord.h
+
+1461686136 source:d:\owncloud\documents\projets ece\sokoban-solver\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462063490 d:\owncloud\documents\projets ece\sokoban-solver\maze.h
+	<vector>
+	<map>
+	<queue>
+	<string>
+
+>>>>>>> 170b346bfa1ac2d5d8ede9f7092d2137baaec09b
+>>>>>>> cbe46b2313c6400b3c8b2a6d605ade989e88a8f4
