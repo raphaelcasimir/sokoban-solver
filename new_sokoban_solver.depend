@@ -1771,14 +1771,14 @@
 	<string>
 	<iostream>
 
-1461661387 source:c:\users\alexandre\documents\travail\code blocks\sokoban\main.cpp
+1461842985 source:c:\users\alexandre\documents\travail\code blocks\sokoban\main.cpp
 	"maze.h"
 	"graphic.h"
 	"utils/console.h"
 	"utils/coord.h"
 	<iostream>
 
-1461661401 c:\users\alexandre\documents\travail\code blocks\sokoban\maze.h
+1462042010 c:\users\alexandre\documents\travail\code blocks\sokoban\maze.h
 	<vector>
 	<string>
 
@@ -1796,11 +1796,137 @@
 1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban\utils\coord.cpp
 	"coord.h"
 
-1461663370 source:c:\users\alexandre\documents\travail\code blocks\sokoban\maze.cpp
+1462042429 source:c:\users\alexandre\documents\travail\code blocks\sokoban\maze.cpp
 	"maze.h"
 	"graphic.h"
 	"utils/console.h"
 	"utils/coord.h"
 	<fstream>
 	<iomanip>
+
+1456600508 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\travail\code blocks\sokoban test\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1461842985 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462043949 c:\users\alexandre\documents\travail\code blocks\sokoban test\maze.h
+	<vector>
+	<stack>
+	<string>
+
+1452771232 c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\coord.h
+
+1462044185 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test\utils\coord.cpp
+	"coord.h"
+
+1456600508 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1462109084 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462043949 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\maze.h
+	<vector>
+	<stack>
+	<string>
+
+1452771232 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\coord.h
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\utils\coord.cpp
+	"coord.h"
+
+1462109210 source:c:\users\alexandre\documents\travail\code blocks\sokoban test 1\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1456600508 source:c:\users\alexandre\documents\sokoban git\graphic.cpp
+	"graphic.h"
+
+1461258691 c:\users\alexandre\documents\sokoban git\graphic.h
+	<allegro.h>
+	<string>
+	<iostream>
+
+1462109084 source:c:\users\alexandre\documents\sokoban git\main.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<iostream>
+
+1462043949 c:\users\alexandre\documents\sokoban git\maze.h
+	<vector>
+	<stack>
+	<string>
+
+1452771232 c:\users\alexandre\documents\sokoban git\utils\console.h
+	<iostream>
+
+1455618970 c:\users\alexandre\documents\sokoban git\utils\coord.h
+
+1462110004 source:c:\users\alexandre\documents\sokoban git\maze.cpp
+	"maze.h"
+	"graphic.h"
+	"utils/console.h"
+	"utils/coord.h"
+	<fstream>
+	<iomanip>
+
+1452771232 source:c:\users\alexandre\documents\sokoban git\utils\console.cpp
+	"console.h"
+	<conio.h>
+	<allegro.h>
+	<winalleg.h>
+
+1452771232 source:c:\users\alexandre\documents\sokoban git\utils\coord.cpp
+	"coord.h"
 
