@@ -513,3 +513,86 @@ std::ostream& operator << (std::ostream& O, const Maze& m)
 
     return O;
 }
+void Maze::detectDeadlocks()
+{
+    char dir = NONE;
+    unsigned short posActual;
+    bool range(true);
+    unsigned int lig=0;
+    unsigned int col=0;
+    std::vector<unsigned short> vecteur_de_coins;
+
+    for(unsigned short i(0); i<m_field.size(); i++)
+    {
+        if((isSquareWalkable(i) || isSquareBox(i))&&(!isSquareGoal(i)))
+        {
+
+            Coord::coord2D(i,lig,col);
+            if((lig!=0)&&(lig!=m_lig)&&(col!=0)&&(col!=m_col))
+            {
+                if((isSquareWall(Coord::getDirPos(i,dir+1)))&&(((isSquareWall(Coord::getDirPos(i,dir+4)))||(isSquareWall(Coord::getDirPos(i,dir+3))))))
+                {
+                    setSquare(i,SPRITE_DEADSQUARE);
+                    vecteur_de_coins.push_back(i);
+                }
+                else if((isSquareWall(Coord::getDirPos(i,dir+2)))&&(((isSquareWall(Coord::getDirPos(i,dir+4)))||(isSquareWall(Coord::getDirPos(i,dir+3))))))
+                {
+                    setSquare(i,SPRITE_DEADSQUARE);
+                    vecteur_de_coins.push_back(i);
+                }
+            }
+        }
+    }
+    while(!vecteur_de_coins.empty())
+    {
+        for(char direc=TOP; direc!=TOP+4; direc++)
+        {
+            if((isSquareWall(Coord::getDirPos(vecteur_de_coins.back(),direc))))
+            {
+                //Ajouter la possibilite de trouver un cul de sac et de remplir  tout le couloir qui mene au cul de sac
+                if((direc<=1)&&(isSquareWall(Coord::getDirPos(vecteur_de_coins.back(),LEFT))))
+                {
+                    posActual=vecteur_de_coins.back();
+                    std::cout << "Coin TOP-LEFT ou BOTTOM-LEFT : " << posActual << std::endl;
+                    range=true;
+                    while((isSquareWall(Coord::getDirPos(posActual,direc)) || isSquareWall(Coord::getDirPos(posActual,(direc+1)%2)))
+                            &&(!isSquareWall(Coord::getDirPos(posActual,RIGHT))))
+                    {
+                        posActual=Coord::getDirPos(posActual,RIGHT);
+                        if((isSquareGoal(posActual))||(isSquareBoxPlaced(posActual)))
+                            range=false;
+                    }
+                    if(isSquareDeadSquare(posActual)&& range)
+                    {
+                        while(!isSquareWall(Coord::getDirPos(posActual,LEFT)))
+                        {
+                            posActual=Coord::getDirPos(posActual,LEFT);
+                            if(isSquareGround(posActual)) setSquare(posActual,SPRITE_DEADSQUARE);
+                        }
+                    }
+                }
+                else if(((direc>=2)&&(direc<=3))&&(isSquareWall(Coord::getDirPos(vecteur_de_coins.back(),TOP))))
+                {
+                    posActual=vecteur_de_coins.back();
+                    range=true;
+                    while((isSquareWall(Coord::getDirPos(posActual,direc)) || isSquareWall(Coord::getDirPos(posActual, ((direc+1)%2)+2)))
+                        &&(!isSquareWall(Coord::getDirPos(posActual,BOTTOM))))
+                    {
+                        posActual=Coord::getDirPos(posActual,BOTTOM);
+                        if((isSquareGoal(posActual))||(isSquareBoxPlaced(posActual)))
+                            range=false;
+                    }
+                    if(isSquareDeadSquare(posActual)&& range)
+                    {
+                        while(!isSquareWall(Coord::getDirPos(posActual,TOP)))
+                        {
+                            posActual=Coord::getDirPos(posActual,TOP);
+                            if(isSquareGround(posActual)) setSquare(posActual,SPRITE_DEADSQUARE);
+                        }
+                    }
+                }
+            }
+        }
+        vecteur_de_coins.pop_back();
+    }
+}

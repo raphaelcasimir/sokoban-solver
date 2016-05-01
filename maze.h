@@ -58,10 +58,12 @@ class Maze
         bool updatePlayer(char dir);
         void draw(const Graphic& g) const;
         bool bruteForce(Maze& m, Graphic& g);
+
         int  mouvementBF(Maze& m, int compteur, Graphic& g);
         void resetNiveau(Maze& m);
         void retourArriere(Maze& m);
         void setFieldBruteforce(Maze& m);
+        void detectDeadlocks();
 
         // Specific getters for field
         bool isSquareWalkable(unsigned short pos) const;
@@ -70,6 +72,7 @@ class Maze
         bool isSquareGoal(unsigned short pos) const;
         bool isSquareWall(unsigned short pos) const;
         bool isSquareBoxPlaced(unsigned short pos) const;
+        bool isSquareDeadSquare(unsigned short pos) const;
 
         // Other getters
         const std::string& getLevelPath() const;
@@ -137,4 +140,8 @@ inline bool Maze::isSquareBoxPlaced(unsigned short pos) const
     return (this->m_field[pos] == SPRITE_BOX_PLACED ? true : false);
 }
 
+inline bool Maze::isSquareDeadSquare(unsigned short pos) const
+{
+    return (this->m_field[pos] == SPRITE_DEADSQUARE ? true : false);
+}
 #endif // MAZE_H_INCLUDED
