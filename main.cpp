@@ -55,9 +55,6 @@ int main()
                         case KEY_G:
                         m.detectDeadlocks();
                         break;
-                    case KEY_R:
-                        m.resetNiveau(m);
-                        break;
                 }
 
                 if (win)

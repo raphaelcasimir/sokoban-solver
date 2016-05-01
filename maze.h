@@ -10,7 +10,6 @@ Please do not remove this header, if you use this file !
 #define MAZE_H_INCLUDED
 
 #include <vector>
-#include <stack>
 #include <string>
 
 // Max size for the field
@@ -32,15 +31,11 @@ class Maze
         unsigned char m_lig, m_col;
         unsigned short m_pos_player;
         unsigned short m_pos_playerReset; // pour la réinisialisation
-        unsigned short m_pos_playerBruteforce;
-        std::vector <unsigned short> m_pos_playerBruteforceTab;
         char m_dir_player;
         std::string m_level_path;
 
         std::vector<unsigned char> m_field; // field
         std::vector<unsigned char> m_fieldReset; // field pour la réinitialisatin du niveau
-        std::vector<unsigned char> m_fieldBruteforce;  // field pour le brute force, c'est une copie du niveau ua fur et a mesure des mouvements
-        std::stack <std::vector<unsigned char> > m_fieldBruteforceTab; // tableau de field du brute force por pouvoir revenir en arriere
         std::vector<unsigned short> m_pos_boxes; // box positions
         std::vector<unsigned short> m_pos_goals; // goal positions
 
@@ -58,11 +53,8 @@ class Maze
         bool updatePlayer(char dir);
         void draw(const Graphic& g) const;
         bool bruteForce(Maze& m, Graphic& g);
-
-        int  mouvementBF(Maze& m, int compteur, Graphic& g);
+        int mouvementBF(Maze& m, int compteur, Graphic& g);
         void resetNiveau(Maze& m);
-        void retourArriere(Maze& m);
-        void setFieldBruteforce(Maze& m);
         void detectDeadlocks();
 
         // Specific getters for field

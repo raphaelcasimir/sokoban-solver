@@ -118,7 +118,6 @@ bool Maze::_load(const std::string& path)
                     {
                         this->m_pos_player = pos;
                         this->m_pos_playerReset = pos;
-                        this->m_pos_playerBruteforce = pos;
                         //LDebug << "\tAdding player pos (" << pos << ")";
                         s = SPRITE_GROUND;
                     }
@@ -126,14 +125,12 @@ bool Maze::_load(const std::string& path)
                     // Add this value in the field
                     this->m_field.push_back(s);
                     this->m_fieldReset.push_back(s);
-                    this->m_fieldBruteforce.push_back(s);
                 }
                 else
                 {
                     // Here - Out of bound
                     this->m_field.push_back(SPRITE_GROUND);
                     this->m_fieldReset.push_back(SPRITE_GROUND);
-                    this->m_fieldBruteforce.push_back(SPRITE_GROUND);
                 }
             }
         }
@@ -158,31 +155,10 @@ bool Maze::_load(const std::string& path)
 
 void Maze::resetNiveau(Maze& m)
 {
-    for(unsigned int i=0; i<m.m_field.size(); i++)
-        m.m_field[i]=m.m_fieldReset[i];
+    for(unsigned int i=0; i<m_field.size(); i++)
+        m_field[i]=m_fieldReset[i];
 
-    m.m_pos_player=m.m_pos_playerReset;
-}
-
-void Maze::setFieldBruteforce(Maze& m)
-{
-    for(unsigned int i=0; i<m.m_field.size(); i++)
-        m.m_fieldBruteforce[i]=m.m_field[i];
-
-    m.m_fieldBruteforceTab.push(m.m_fieldBruteforce);
-    m.m_pos_playerBruteforceTab.push_back(m.m_pos_player);
-}
-
-void Maze::retourArriere(Maze& m)
-{
-    std::vector<unsigned char> m_fieldTampon=m.m_fieldBruteforceTab.top();
-
-    for(unsigned int i=0; i<m.m_field.size(); i++)
-        m.m_field[i]=m_fieldTampon[i];
-
-    m.m_pos_player=m.m_pos_playerBruteforceTab[m.m_pos_playerBruteforceTab.size()-1];
-    m.m_pos_playerBruteforceTab.pop_back();
-    m.m_fieldBruteforceTab.pop();
+    m_pos_player=m_pos_playerReset;
 }
 
 int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
@@ -191,8 +167,6 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
 
     for (int i=0; i<4; i++)
         {
-        m.setFieldBruteforce(m);
-
             if (i==0)
             {
                 win = updatePlayer(TOP);
@@ -200,10 +174,8 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
-                rest(10);
-                if (win==true)
-                    return -1;
-                if (compteur>0)
+                rest(1000);
+                if (compteur>=1)
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
@@ -217,8 +189,8 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
-                rest(10);
-                if (compteur>0)
+                rest(1000);
+                if (compteur>=1)
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
@@ -232,8 +204,8 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
-                rest(10);
-                if (compteur>0)
+                rest(1000);
+                if (compteur>=1)
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
@@ -247,31 +219,24 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
-                rest(10);
-                if (compteur>0)
+                rest(1000);
+                if (compteur>=1)
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
                 }
             }
-            if (win==false&&compteur==0&&i==3&&m.m_fieldBruteforceTab.size()>1)
-            {
-                m.retourArriere(m);
-                g.clear();
-                m.draw(g);
-                g.display(Coord::m_nb_col);
-                rest(10);
-            }
+
             if (win==false&&compteur==0)
             {
-                m.retourArriere(m);
+                m.resetNiveau(m);
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
-                rest(10);
+                rest(1000);
             }
 
-            if (_isCompleted())
+            if (win==true)
                 return -1;
 
         }
@@ -290,7 +255,7 @@ bool Maze::bruteForce(Maze& m, Graphic& g)
         compteur = mouvementBF(m, compteur, g);
     }
 
-        return true;
+    return true;
 }
 
 
@@ -317,12 +282,7 @@ bool Maze::updatePlayer(char dir)
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
-            {
-                setSquare(newPosBox,SPRITE_BOX);
-                setSquare(pos,SPRITE_GOAL);
-            }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox))
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
@@ -348,12 +308,7 @@ bool Maze::updatePlayer(char dir)
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
-            {
-                setSquare(newPosBox,SPRITE_BOX);
-                setSquare(pos,SPRITE_GOAL);
-            }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox))
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
@@ -379,12 +334,7 @@ bool Maze::updatePlayer(char dir)
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
-            {
-                setSquare(newPosBox,SPRITE_BOX);
-                setSquare(pos,SPRITE_GOAL);
-            }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox))
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
@@ -410,12 +360,7 @@ bool Maze::updatePlayer(char dir)
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))
         {
-            if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))
-            {
-                setSquare(newPosBox,SPRITE_BOX);
-                setSquare(pos,SPRITE_GOAL);
-            }
-            if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))
+            if (isSquareGround(newPosBox))
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
