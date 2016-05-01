@@ -118,7 +118,6 @@ bool Maze::_load(const std::string& path)
                     {
                         this->m_pos_player = pos;
                         this->m_pos_playerReset = pos;
-                        this->m_pos_playerBruteforce = pos;
                         //LDebug << "\tAdding player pos (" << pos << ")";
                         s = SPRITE_GROUND;
                     }
@@ -126,14 +125,12 @@ bool Maze::_load(const std::string& path)
                     // Add this value in the field
                     this->m_field.push_back(s);
                     this->m_fieldReset.push_back(s);
-                    this->m_fieldBruteforce.push_back(s);
                 }
                 else
                 {
                     // Here - Out of bound
                     this->m_field.push_back(SPRITE_GROUND);
                     this->m_fieldReset.push_back(SPRITE_GROUND);
-                    this->m_fieldBruteforce.push_back(SPRITE_GROUND);
                 }
             }
         }
@@ -158,6 +155,7 @@ bool Maze::_load(const std::string& path)
 
 void Maze::resetNiveau(Maze& m)     // Fonction qui reset le niveau, ave cles coordonnées de base du niveau chargé
 {
+<<<<<<< HEAD
     for(unsigned int i=0; i<m.m_field.size(); i++)
         m.m_field[i]=m.m_fieldReset[i];             // Position de m_field copié dedans
 
@@ -189,6 +187,12 @@ void Maze::retourArriere(Maze& m)
     m.m_pos_player=m.m_pos_playerBruteforceTab[m.m_pos_playerBruteforceTab.size()-1];
     m.m_pos_playerBruteforceTab.pop_back();
     m.m_fieldBruteforceTab.pop();
+=======
+    for(unsigned int i=0; i<m_field.size(); i++)
+        m_field[i]=m_fieldReset[i];
+
+    m_pos_player=m_pos_playerReset;
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
 }
 
 int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)    // Fonction qui donne le mouvement de player dans les 4 directions de base
@@ -197,22 +201,31 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)    // Fonction qui donn
 
     for (int i=0; i<4; i++)
         {
+<<<<<<< HEAD
         m.setFieldBruteforce(m);        // On enregistre la positio actuelle pour pouvoir revenir en arriere qi le niveau n'est pas termine
 
         if (g.keyGet(KEY_ESC))      // Si on appuye sur ESC on quitte le brute force
             return -2;
 
             if (i==0)           // On essaye les quatre direections une par une
+=======
+            if (i==0)
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
             {
                 win = updatePlayer(TOP);            // Mouvement TOP
                 std::cout<<"^ = "<<i<<std::endl;                //Affichage dans la console puis sur allegro
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
+<<<<<<< HEAD
                 rest(10);
                 if (win==true)
                     return -1;
                 if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
+=======
+                rest(1000);
+                if (compteur>=1)
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
@@ -226,8 +239,13 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)    // Fonction qui donn
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
+<<<<<<< HEAD
                 rest(10);
                 if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
+=======
+                rest(1000);
+                if (compteur>=1)
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
@@ -241,8 +259,13 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)    // Fonction qui donn
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
+<<<<<<< HEAD
                 rest(10);
                 if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
+=======
+                rest(1000);
+                if (compteur>=1)
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
@@ -256,13 +279,19 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)    // Fonction qui donn
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
+<<<<<<< HEAD
                 rest(10);
                 if (compteur>0)             // Si après le déplacement le niveau n'est pas terminé on relance al fonction récursive
+=======
+                rest(1000);
+                if (compteur>=1)
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
                 {
                     compteur--;
                     compteur=mouvementBF(m,compteur, g);
                 }
             }
+<<<<<<< HEAD
             if (win==false&&compteur==0&&i==3&&m.m_fieldBruteforceTab.size()>1)
             {
                 m.retourArriere(m);
@@ -272,15 +301,23 @@ int Maze::mouvementBF(Maze& m, int compteur, Graphic& g)    // Fonction qui donn
                 rest(10);
             }
             if (win==false&&compteur==0)            // Si le niveau n'est pas terminé après le dernier déplacement on revient en arriere
+=======
+
+            if (win==false&&compteur==0)
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
             {
-                m.retourArriere(m);
+                m.resetNiveau(m);
                 g.clear();
                 m.draw(g);
                 g.display(Coord::m_nb_col);
-                rest(10);
+                rest(1000);
             }
 
+<<<<<<< HEAD
             if (_isCompleted())     // On verifie si le niveau est terminé
+=======
+            if (win==true)
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
                 return -1;
 
         }
@@ -299,11 +336,14 @@ bool Maze::bruteForce(Maze& m, Graphic& g)
         compteur = mouvementBF(m, compteur, g);
     }
 
+<<<<<<< HEAD
     if (compteur==-1)
         return true;
     if (compteur==-2)
         return false;
 
+=======
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
     return true;
 }
 
@@ -331,12 +371,16 @@ bool Maze::updatePlayer(char dir)               // Cette méthode sert à déplacer
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))      // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
+<<<<<<< HEAD
             if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))      // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
             if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))      // Ici on s'occupe des caisses pas encore placées
+=======
+            if (isSquareGround(newPosBox))
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
@@ -362,12 +406,16 @@ bool Maze::updatePlayer(char dir)               // Cette méthode sert à déplacer
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))          // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
+<<<<<<< HEAD
             if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))          // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
             if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))       // Ici on s'occupe des caisses pas encore placées
+=======
+            if (isSquareGround(newPosBox))
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
@@ -393,12 +441,16 @@ bool Maze::updatePlayer(char dir)               // Cette méthode sert à déplacer
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))          // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
+<<<<<<< HEAD
             if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))          // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
             if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))       // Ici on s'occupe des caisses pas encore placées
+=======
+            if (isSquareGround(newPosBox))
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);
@@ -424,12 +476,16 @@ bool Maze::updatePlayer(char dir)               // Cette méthode sert à déplacer
 
         else if (isSquareBox(pos)&&_canPushBox(pos,dir,newPosBox))          // On verifie que la prochaine case est une caisse et qu'elle est poussables
         {
+<<<<<<< HEAD
             if (isSquareGround(newPosBox)&&isSquareBoxPlaced(pos))          // Ici on s'occupe des caisses pas encore placées
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GOAL);
             }
             if (isSquareGround(newPosBox)&&(!isSquareBoxPlaced(pos)))       // Ici on s'occupe des caisses pas encore placées
+=======
+            if (isSquareGround(newPosBox))
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
             {
                 setSquare(newPosBox,SPRITE_BOX);
                 setSquare(pos,SPRITE_GROUND);

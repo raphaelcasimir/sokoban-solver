@@ -51,14 +51,15 @@ int main()
                         break;
                     case KEY_F:
                         win = m.bruteForce(m, g);
+<<<<<<< HEAD
                         if (win==false)
                             g.keyGet(KEY_ESC);
                         break;
+=======
+                        break;
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
                         case KEY_G:
                         m.detectDeadlocks();
-                        break;
-                    case KEY_R:
-                        m.resetNiveau(m);
                         break;
                 }
 

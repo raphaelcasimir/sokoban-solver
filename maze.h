@@ -10,7 +10,6 @@ Please do not remove this header, if you use this file !
 #define MAZE_H_INCLUDED
 
 #include <vector>
-#include <stack>
 #include <string>
 
 // Max size for the field
@@ -32,15 +31,16 @@ class Maze
         unsigned char m_lig, m_col;
         unsigned short m_pos_player;
         unsigned short m_pos_playerReset; // pour la réinisialisation
+<<<<<<< HEAD
         unsigned short m_pos_playerBruteforce;  // Copie de la position de player poour réinisaitilesre la position pour le brute force
         std::vector <unsigned short> m_pos_playerBruteforceTab;     // Vecteur de position de player pour le brute force
+=======
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
         char m_dir_player;
         std::string m_level_path;
 
         std::vector<unsigned char> m_field; // field
         std::vector<unsigned char> m_fieldReset; // field pour la réinitialisatin du niveau
-        std::vector<unsigned char> m_fieldBruteforce;  // field pour le brute force, c'est une copie du niveau ua fur et a mesure des mouvements
-        std::stack <std::vector<unsigned char> > m_fieldBruteforceTab; // tableau de field du brute force por pouvoir revenir en arriere
         std::vector<unsigned short> m_pos_boxes; // box positions
         std::vector<unsigned short> m_pos_goals; // goal positions
 
@@ -57,6 +57,7 @@ class Maze
         bool init();
         bool updatePlayer(char dir);            // Cette méthode sert à déplacer le joueur manuellement avec les flèches du clavier
         void draw(const Graphic& g) const;
+<<<<<<< HEAD
         bool bruteForce(Maze& m, Graphic& g);       // Fonction qui lance la méthode récursive du brute force
 
         int  mouvementBF(Maze& m, int compteur, Graphic& g);    // Fonction rcrsive du brute force
@@ -73,6 +74,21 @@ class Maze
         bool isSquareWall(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est un mure
         bool isSquareBoxPlaced(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est une caisse placée sur une case goal
         bool isSquareDeadSquare(unsigned short pos) const;        // Fonction qui verifie que la case à la coordonnée pos est un deadlock
+=======
+        bool bruteForce(Maze& m, Graphic& g);
+        int mouvementBF(Maze& m, int compteur, Graphic& g);
+        void resetNiveau(Maze& m);
+        void detectDeadlocks();
+
+        // Specific getters for field
+        bool isSquareWalkable(unsigned short pos) const;
+        bool isSquareGround(unsigned short pos) const;
+        bool isSquareBox(unsigned short pos) const;
+        bool isSquareGoal(unsigned short pos) const;
+        bool isSquareWall(unsigned short pos) const;
+        bool isSquareBoxPlaced(unsigned short pos) const;
+        bool isSquareDeadSquare(unsigned short pos) const;
+>>>>>>> b911a656e2497472068c367cd9c3139faaf18838
 
         // Other getters
         const std::string& getLevelPath() const;
