@@ -485,7 +485,7 @@ std::map <int, char>& bfsMario (Maze& mc) {
             // Testing this position
             posTest = *it;
             if ( mc.isSquareWalkable(posTest) ) {
-                if (!flammenWerferMap[posTest]) {
+                if (!flammenWerferMap.count(posTest)) {
                     flammenWerferMap[posTest] = 'x';
                     q.push(posTest);
                 }
