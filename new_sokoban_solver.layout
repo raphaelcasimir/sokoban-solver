@@ -2,9 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="graphic.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="graphic.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3676" topLine="129" />
+			<Cursor1 position="1005" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="utils\coord.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -12,9 +12,9 @@
 			<Cursor1 position="610" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="maze.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="900" topLine="16" />
+			<Cursor1 position="14138" topLine="496" />
 		</Cursor>
 	</File>
 	<File name="utils\coord.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -22,36 +22,24 @@
 			<Cursor1 position="46" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="maze.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="977" topLine="13" />
-		</Cursor>
-		<Folding>
-			<Collapse line="18" />
-			<Collapse line="22" />
-			<Collapse line="26" />
-			<Collapse line="53" />
-			<Collapse line="67" />
-			<Collapse line="156" />
-			<Collapse line="248" />
-			<Collapse line="263" />
-			<Collapse line="391" />
-			<Collapse line="412" />
-		</Folding>
-	</File>
-	<File name="graphic.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1005" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="maze.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3792" topLine="66" />
+			<Cursor1 position="1682" topLine="14" />
 		</Cursor>
 	</File>
 	<File name="utils\console.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1533" topLine="72" />
+		</Cursor>
+	</File>
+	<File name="maze.h" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1820" topLine="37" />
+		</Cursor>
+	</File>
+	<File name="graphic.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3676" topLine="129" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -38,8 +38,7 @@ bool Maze::init()
 // Check if all boxes are on a goal
 bool Maze::_isCompleted() const
 {
-    for (unsigned int i=0; i<this->m_pos_boxes.size(); ++i)
-    {
+    for (unsigned int i=0; i<this->m_pos_boxes.size(); ++i) {
         if (!this->isSquareBoxPlaced(this->m_pos_goals[i]))
             return false;
     }
@@ -459,13 +458,9 @@ std::ostream& operator << (std::ostream& O, const Maze& m)
     return O;
 }
 
-bool Maze::solveBFS(Maze& m, Graphic& g) {
-    Maze mc = m;
-
-}
 
 // BFS of Mario
-std::map <int, char>& bfsMario (Maze& mc) {
+std::map <int, char> Maze::bfsMario (Maze mc) {
     std::map <int, char> flammenWerferMap; // Check table (tableau de marquage)
     std::queue <short int> q;
     unsigned short posTemp = 42;
@@ -495,39 +490,57 @@ std::map <int, char>& bfsMario (Maze& mc) {
     return flammenWerferMap;
 }
 
-bool solveBFS(Maze& m, Graphic& g) {
-    std::map <std::vector<short int>, char> badassMap; // Big map that stores the field states. Keys are position of Mario and the boxes
-    std::vector <std::queue <short int>> qBox; // Queues for the boxes' BFS
-    std::stack <short int> marioPos; // Storing Mario's positions to be able to reconstitute the path to victory
+bool Maze::solveBFS(Maze m, Graphic& g) {
+    std::map <std::vector<unsigned short>, char> badassMap; // Big map that stores the field states. Keys are position of Mario and the boxes
+    std::vector <std::queue <unsigned short>> qBox; // Queues for the boxes' BFS
+    std::stack <unsigned short> marioPos; // Storing Mario's positions to be able to reconstitute the path to victory
+    std::queue <unsigned short> tempQueue;
+    unsigned short posTemp = 42;
+    unsigned char boxNbr = 0;
 
     // Where to put the positions to test (temporary variables)
     unsigned short nextMarioPos = 42;
     unsigned short nextBoxPos = 42;
 
-    std::vector <unsigned short>  vXplore = {1,-1, m.getCol(),-m.getCol()}; // Storing the position modifiers to use a "for" again
-
-    while (!m._isCompleted()) {
+    // We store the first state
     badassMap [m.getKey()] = 'x';
-    q.push(posTemp);
 
+    // Storing initial mario position
+    marioPos.push(m.getPosPlayer());
+    // First we store the original position of the boxes in each of their queues
+    for (std::vector<unsigned short>::iterator it = m.getPosBoxes().begin(); it != m.getPosBoxes().end(); ++it) {
+            //tempQueue.push(*it);
+            //qBox.reserve(qBox.size() + sizeof(std::vector<std::queue<unsigned short>>)); // Reserve one more space for a queue
+            //qBox.push_back(tempQueue);
+            boxNbr++;
+    }
 
-    while(!q.empty()) {
-        posTemp = q.front();
-        q.pop();
+    // Then we iterate a BFS algorithm for each of the boxes until it is completed
+    while (!m._isCompleted()) {
 
-        // Setting the position to explore
-        for (std::vector<unsigned short>::iterator it = vXplore.begin(); it != vXplore.end(); ++it) {
-            // Testing this position
-            posTest = *it;
-            if ( mc.isSquareWalkable(posTest) ) {
-                if (!flammenWerferMap.count(posTest)) {
-                    flammenWerferMap[posTest] = 'x';
-                    q.push(posTest);
+    for (int i = 0; i<boxNbr; ++i) {
+        posTemp = qBox[i].front();
+        qBox[i].pop();
+
+        // Testing the positions
+        //Testing if Mario can get in the right place
+        nextMarioPos = posTemp + m.getCol();
+        if(m.bfsMario(m).count(nextMarioPos)) {
+            if( m._canPushBox(posTemp,TOP,nextBoxPos) ) { // TOP
+                if(!badassMap[m.getKey()]) { // Does the state exist ?
+                    //qBox[i].push(nextBoxPos); // Add to the corresponding queue
+                    m.setSquare(m.getPosPlayer(),0);
+                    m.setPlayerPos(posTemp);
+                    m.setSquare(m.getPosPlayer(),5);
+                    m.setSquare(nextBoxPos, 2);
+
+                    badassMap[m.getKey()]= 'x';
                 }
             }
         }
     }
     }
+    std::cout<<std::endl<<"Maze completed successfully"<<std::endl;
 
     return 1;
 }

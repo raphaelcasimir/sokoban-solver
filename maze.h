@@ -14,6 +14,7 @@ Please do not remove this header, if you use this file !
 #include <queue>
 #include <stack>
 #include <string>
+#include <iostream>
 
 // Max size for the field
 #define NB_MAX_WIDTH     30
@@ -44,13 +45,15 @@ class Maze
 
         friend std::ostream& operator << (std::ostream& O, const Maze& n);
 
-        bool _isCompleted() const;
-        bool _canPushBox(unsigned short posBox, char dir, unsigned short& newPosBox) const;
         bool _load(const std::string& path);
 
     public:
+        bool _canPushBox(unsigned short posBox, char dir, unsigned short& newPosBox) const;
+        bool _isCompleted() const;
+
         Maze(const std::string& path);
         ~Maze();
+
 
         bool init();
         bool updatePlayer(char dir);
@@ -58,9 +61,9 @@ class Maze
         void resetNiveau(Maze& m);
 
         // Specific solver functions
-        bool solveBFS(Maze& m, Graphic& g);
+        bool solveBFS(Maze m, Graphic& g);
         bool bruteForce(Maze& m, Graphic& g);
-        std::map <int, char> bfsMario (Maze& mc);
+        std::map <int, char> bfsMario (Maze mc);
         int mouvementBF(Maze& m, int compteur, Graphic& g);
 
 
@@ -103,7 +106,7 @@ inline unsigned char Maze::getCol() const { return this->m_col;} // Added useful
 inline std::vector <unsigned short> Maze::getPosBoxes() const { return m_pos_boxes; }
 inline unsigned short Maze::getPosPlayer() const { return m_pos_player;}
 
-// Makes the map key that characterizes the state of the field, inlined since it's very short
+// Makes the map key that characterizes the state of the field, inlined since it's quite short
 inline std::vector <unsigned short> Maze::getKey()const {
     std::vector <unsigned short> key;
     key.reserve(sizeof(unsigned short) + this->getPosBoxes().size());

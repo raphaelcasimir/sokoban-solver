@@ -11,7 +11,6 @@ Please do not remove this header, if you use this file !
 #include "utils/coord.h"
 #include <iostream>
 
-
 // Init allegro with 800x600 (resolution)
 Graphic g(800,600,32);
 
@@ -51,6 +50,9 @@ int main()
                         break;
                     case KEY_F:
                         win = m.bruteForce(m, g);
+                        break;
+                    case KEY_B:
+                        win = m.solveBFS(m,g);
                         break;
                 }
 
