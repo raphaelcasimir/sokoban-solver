@@ -1,0 +1,9 @@
+diff a/maze.h b/maze.h	(rejected hunks)
+@@ -57,6 +57,7 @@
+         bool init();
+         bool updatePlayer(char dir);            // Cette m�thode sert � d�placer le joueur manuellement avec les fl�ches du clavier
+         void draw(const Graphic& g) const;
++<<<<<<< HEAD
+         bool bruteForce(Maze& m, Graphic& g);       // Fonction qui lance la m�thode r�cursive du brute force
+ 
+         int  mouvementBF(Maze& m, int compteur, Graphic& g);    // Fonction rcrsive du brute force
